@@ -1,0 +1,14 @@
+package com.simplilearn.client;
+
+public class Box {
+	private double length,width,height;
+	
+	public Box() {
+		this.length=1;
+		this.width=1;
+		this.height=1;
+		
+	}
+	
+	
+}

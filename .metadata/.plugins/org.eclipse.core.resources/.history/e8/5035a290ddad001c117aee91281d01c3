@@ -1,0 +1,16 @@
+
+public class DoWhileTest {
+
+	public static void main(String[] args) {
+		int x=30;
+		
+		do {
+			System.out.printl("value of x:"+x);
+			x++;
+			System.out.print("\n");
+			
+			
+		} while (x<20); //condition=false
+	}
+
+}
