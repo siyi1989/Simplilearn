@@ -1,4 +1,4 @@
-!SESSION 2022-03-26 21:31:51.481 -----------------------------------------------
+!SESSION 2022-04-09 12:42:11.192 -----------------------------------------------
 eclipse.buildId=4.23.0.I20220308-0310
 java.version=17.0.2
 java.vendor=Eclipse Adoptium
@@ -6,254 +6,547 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_SG
 Framework arguments:  -product org.eclipse.epp.package.java.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
 
-!ENTRY org.eclipse.jface 2 0 2022-03-26 21:32:08.216
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-03-26 21:32:08.216
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
-		Open a type in a Java editor,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@405603b6,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
-		,
-		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3c3cd13a,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-03-26 21:32:08.216
-!MESSAGE A conflict occurred for ALT+SHIFT+R:
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
-		Rename the selected element,
-		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@56b751b1,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
-		Rename the selected item,
-		Category(org.eclipse.ui.category.file,File,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2f61de04,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
+This is a continuation of log file C:\Users\limsi\eclipse-workspace\.metadata\.bak_2.log
+Created Time: 2022-04-10 23:53:58.258
 
-!ENTRY org.eclipse.egit.ui 2 0 2022-03-26 21:32:18.054
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\limsi'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-!SESSION 2022-03-27 21:32:55.881 -----------------------------------------------
-eclipse.buildId=4.23.0.I20220308-0310
-java.version=17.0.2
-java.vendor=Eclipse Adoptium
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_SG
-Framework arguments:  -product org.eclipse.epp.package.java.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2022-04-10 23:53:58.258
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1271)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.internalGetHoverInfo(NLSStringHover.java:139)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo2(NLSStringHover.java:118)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
 
-!ENTRY org.eclipse.jface 2 0 2022-03-27 21:33:06.603
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-03-27 21:33:06.603
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
-		Open a type in a Java editor,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@47ffdbba,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
-		,
-		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@ba0018e,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-03-27 21:33:06.603
-!MESSAGE A conflict occurred for ALT+SHIFT+R:
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
-		Rename the selected element,
-		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@45311a99,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
-		Rename the selected item,
-		Category(org.eclipse.ui.category.file,File,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7037a680,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-
-!ENTRY org.eclipse.egit.ui 2 0 2022-03-27 21:33:11.348
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\limsi'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.jdt.core 4 4 2022-03-27 22:42:12.949
+!ENTRY org.eclipse.jdt.core 4 4 2022-04-10 23:53:58.272
 !MESSAGE Exception occurred during compilation unit conversion:
 ----------------------------------- SOURCE BEGIN -------------------------------------
+package com.lockedme;
 
-public class WhileTest {
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
-	public static void main(String[] args) {
-		int x=10;
-		while (z<20) {
-			System.out.println/9
+public class FileOperations {
+
+	//invalid characters in file or filename
+	
+	public static final String REGEX_PATTERN = "^[A-za-z0-9.]{1,255}$";
+	
+	public static boolean validateStringFilenameUsingRegex(String path) {
+	    if (path == null) {
+	        return false;
+	    }
+	    return path.matches(REGEX_PATTERN);
+	    
+	}
+	
+	//folder related
+	public static String folderName;
+	public static String path;
+	
+	public static String getFolderName() {
+		Scanner sc1 = new Scanner(System.in);
+		if (sc1.next().endsWith("\\"))
+		String folderName = sc1.next();	
+		if (!folderName.endsWith("\\")) {
+			(folderName+"\\");}
+		return folderName;
 		}
-			
-	}
+	
+	
+	public static void createFolderIfNotPresent(String folderName) {
+		File folder = new File(folderName);
 
-}
-
------------------------------------ SOURCE END -------------------------------------
-!STACK 0
-java.lang.IllegalArgumentException
-	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
-	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3504)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3087)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
-	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
-	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
-	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
-	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
-	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
-	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
-	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
-	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
-	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
-	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
-	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
-	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
-	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
-
-!ENTRY org.eclipse.jdt.ui 4 2 2022-03-27 22:42:12.960
-!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
-!STACK 0
-java.lang.IllegalArgumentException
-	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
-	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3504)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3087)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
-	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
-	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
-	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
-	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
-	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
-	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
-	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
-	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
-	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
-	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
-	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
-	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
-	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
-
-!ENTRY org.eclipse.jdt.ui 4 0 2022-03-27 22:42:12.961
-!MESSAGE Error in JDT Core during reconcile
-!STACK 0
-java.lang.IllegalArgumentException
-	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
-	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3504)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3087)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
-	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
-	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
-	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
-	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
-	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
-	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
-	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
-	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
-	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
-	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
-	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
-	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
-	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
-	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
-
-!ENTRY org.eclipse.jdt.core 4 4 2022-03-27 22:42:13.052
-!MESSAGE Exception occurred during compilation unit conversion:
------------------------------------ SOURCE BEGIN -------------------------------------
-
-public class WhileTest {
-
-	public static void main(String[] args) {
-		int x=10;
-		while (z<20) {
-			System.out.println/9
+		try{// If the Folder doesn't exist
+			folder.mkdirs();
+		} catch (Exception e) {
+			System.out.println("Failed to create folder " + folderName);
+			System.out.println(e.getClass().getName());
 		}
+	}
+	
+	//file related
+	public static List<String> listFilesInDirectory(String path, int indentationCount, List<String> fileListNames) {
+		File dir = new File(path);
+		File[] files = dir.listFiles();
+		List<File> filesList = Arrays.asList(files);
+
+		Collections.sort(filesList);
+
+		if (files != null && files.length > 0) {
+			for (File file : filesList) {
+
+				System.out.print(" ".repeat(indentationCount * 2));
+
+				if (file.isDirectory()) {
+					System.out.println("`-- " + file.getName());
+
+					//The Recursively indent and displaying all the files
+					fileListNames.add(file.getName());
+					listFilesInDirectory(file.getAbsolutePath(), indentationCount + 1, fileListNames);
+				} else {
+					System.out.println("|-- " + file.getName());
+					fileListNames.add(file.getName());
+				}
+			}
+		} else {
+			System.out.print(" ".repeat(indentationCount * 2));
+			System.out.println("|-- Empty Directory");
+		}
+		System.out.println();
+		return fileListNames;
+	}
+
+	public static void createFile(String folderName,String fileToAdd, Scanner sc) {
+		Path pathToFile = Paths.get(folderName + fileToAdd);
+		try {
+			Files.createDirectories(pathToFile.getParent());
+			Files.createFile(pathToFile);
+			System.out.println(fileToAdd + "is been created successfully");
+
+			System.out.println("Would you like to add some content to the file? (Y/N)");
+			String choice = sc.next().toLowerCase();
+
+			sc.nextLine();
+			if (choice.equals("y")) {
+				System.out.println("\n\nInput content and press the enter\n");
+				String content = sc.nextLine();
+				Files.write(pathToFile, content.getBytes());
+				System.out.println("\nContent written to file " + fileToAdd);
+				System.out.println("The Content can be read by using Notepad or Notepad++");
+			}
+
+		} catch (IOException e) {
+			System.out.println("Failed to create the file " + fileToAdd);
+			System.out.println(e.getClass().getName());
+		}
+	}
+
+	public static List<String> displayFileLocations(String fileName, String path) {
+		List<String> fileListNames = new ArrayList<>();
+		FileOperations.searchFileRecursively(path, fileName, fileListNames);
+
+		if (fileListNames.isEmpty()) {
+			System.out.println("\n\n***** Could not find any file with the given file name \"" + fileName + "\" *****\n\n");
+		} else {
+			System.out.println("\n\nFound file at the below location(s):");
+
+			List<String> files = IntStream.range(0, fileListNames.size())
+					.mapToObj(index -> (index + 1) + ": " + fileListNames.get(index)).collect(Collectors.toList());
+
+			files.forEach(System.out::println);
+		}
+
+		return fileListNames;
+	}
+
+	public static void searchFileRecursively(String path, String fileName, List<String> fileListNames) {
+		File dir = new File(path);
+		File[] files = dir.listFiles();
+		List<File> filesList = Arrays.asList(files);
+
+		if (files != null && files.length > 0) {
+			for (File file : filesList) {
+
+				if (file.getName().startsWith(fileName)) {
+					fileListNames.add(file.getAbsolutePath());
+				}
+
+				//  the need to search in the directories separately to ensuring  all the files of required file name is been searched.
+				
+				if (file.isDirectory()) {
+					searchFileRecursively(file.getAbsolutePath(), fileName, fileListNames);
+				}
+			}
+		}
+	}
+
+	public static void displayAllFiles(String path) {
+		// All The required files and folders inside user specified folder
+		System.out.println("Display all the files with directory structure in the Ascending order\n");
+		System.out.println(path);
+		// List the Files in the Directory displays files along with the Folder structure
+		List<String> filesListNames = FileOperations.listFilesInDirectory(path, 0, new ArrayList<String>());
+
+		System.out.println("Display all the files in Ascending Order\n");
+		Collections.sort(filesListNames);
+
+		filesListNames.stream().forEach(System.out::println);
+	}
+	public static void deleteFileRecursively(String path) {
+
+		File currFile = new File(path);
+		File[] files = currFile.listFiles();
+
+		if (files != null && files.length > 0) {
+			for (File file : files) {
+
+				String fileName = file.getName() + " at " + file.getParent();
+				if (file.isDirectory()) {
+					deleteFileRecursively(file.getAbsolutePath());
+				}
+
+				if (file.delete()) {
+					System.out.println(fileName + " deleted successfully");
+				} else {
+					System.out.println("Failed to delete " + fileName);
+				}
+			}
+		}
+
+		String currFileName = currFile.getName() + " at " + currFile.getParent();
+		if (currFile.delete()) {
+			System.out.println(currFileName + " deleted successfully");
+		} else {
+			System.out.println("Failed to delete " + currFileName);
+		}
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1271)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoveredASTNode(JavadocHover.java:1003)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:799)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:743)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:666)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:658)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2022-04-10 23:53:58.273
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1271)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoveredASTNode(JavadocHover.java:1003)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:799)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:743)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:666)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:658)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2022-04-10 23:53:58.274
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1271)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoveredASTNode(JavadocHover.java:1003)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:799)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:743)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:666)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:658)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-04-10 23:54:06.073
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package com.lockedme;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+public class FileOperations {
+
+	//invalid characters in file or filename
+	
+	public static final String REGEX_PATTERN = "^[A-za-z0-9.]{1,255}$";
+	
+	public static boolean validateStringFilenameUsingRegex(String path) {
+	    if (path == null) {
+	        return false;
+	    }
+	    return path.matches(REGEX_PATTERN);
+	    
+	}
+	
+	//folder related
+	public static String folderName;
+	public static String path;
+	
+	public static String getFolderName() {
+		Scanner sc1 = new Scanner(System.in);
+		if (sc1.next().endsWith("\\")) {
 			
+		}
+		String folderName = sc1.next();	
+		if (!folderName.endsWith("\\")) {
+			(folderName+"\\");}
+		return folderName;
+		}
+	
+	
+	public static void createFolderIfNotPresent(String folderName) {
+		File folder = new File(folderName);
+
+		try{// If the Folder doesn't exist
+			folder.mkdirs();
+		} catch (Exception e) {
+			System.out.println("Failed to create folder " + folderName);
+			System.out.println(e.getClass().getName());
+		}
+	}
+	
+	//file related
+	public static List<String> listFilesInDirectory(String path, int indentationCount, List<String> fileListNames) {
+		File dir = new File(path);
+		File[] files = dir.listFiles();
+		List<File> filesList = Arrays.asList(files);
+
+		Collections.sort(filesList);
+
+		if (files != null && files.length > 0) {
+			for (File file : filesList) {
+
+				System.out.print(" ".repeat(indentationCount * 2));
+
+				if (file.isDirectory()) {
+					System.out.println("`-- " + file.getName());
+
+					//The Recursively indent and displaying all the files
+					fileListNames.add(file.getName());
+					listFilesInDirectory(file.getAbsolutePath(), indentationCount + 1, fileListNames);
+				} else {
+					System.out.println("|-- " + file.getName());
+					fileListNames.add(file.getName());
+				}
+			}
+		} else {
+			System.out.print(" ".repeat(indentationCount * 2));
+			System.out.println("|-- Empty Directory");
+		}
+		System.out.println();
+		return fileListNames;
 	}
 
+	public static void createFile(String folderName,String fileToAdd, Scanner sc) {
+		Path pathToFile = Paths.get(folderName + fileToAdd);
+		try {
+			Files.createDirectories(pathToFile.getParent());
+			Files.createFile(pathToFile);
+			System.out.println(fileToAdd + "is been created successfully");
+
+			System.out.println("Would you like to add some content to the file? (Y/N)");
+			String choice = sc.next().toLowerCase();
+
+			sc.nextLine();
+			if (choice.equals("y")) {
+				System.out.println("\n\nInput content and press the enter\n");
+				String content = sc.nextLine();
+				Files.write(pathToFile, content.getBytes());
+				System.out.println("\nContent written to file " + fileToAdd);
+				System.out.println("The Content can be read by using Notepad or Notepad++");
+			}
+
+		} catch (IOException e) {
+			System.out.println("Failed to create the file " + fileToAdd);
+			System.out.println(e.getClass().getName());
+		}
+	}
+
+	public static List<String> displayFileLocations(String fileName, String path) {
+		List<String> fileListNames = new ArrayList<>();
+		FileOperations.searchFileRecursively(path, fileName, fileListNames);
+
+		if (fileListNames.isEmpty()) {
+			System.out.println("\n\n***** Could not find any file with the given file name \"" + fileName + "\" *****\n\n");
+		} else {
+			System.out.println("\n\nFound file at the below location(s):");
+
+			List<String> files = IntStream.range(0, fileListNames.size())
+					.mapToObj(index -> (index + 1) + ": " + fileListNames.get(index)).collect(Collectors.toList());
+
+			files.forEach(System.out::println);
+		}
+
+		return fileListNames;
+	}
+
+	public static void searchFileRecursively(String path, String fileName, List<String> fileListNames) {
+		File dir = new File(path);
+		File[] files = dir.listFiles();
+		List<File> filesList = Arrays.asList(files);
+
+		if (files != null && files.length > 0) {
+			for (File file : filesList) {
+
+				if (file.getName().startsWith(fileName)) {
+					fileListNames.add(file.getAbsolutePath());
+				}
+
+				//  the need to search in the directories separately to ensuring  all the files of required file name is been searched.
+				
+				if (file.isDirectory()) {
+					searchFileRecursively(file.getAbsolutePath(), fileName, fileListNames);
+				}
+			}
+		}
+	}
+
+	public static void displayAllFiles(String path) {
+		// All The required files and folders inside user specified folder
+		System.out.println("Display all the files with directory structure in the Ascending order\n");
+		System.out.println(path);
+		// List the Files in the Directory displays files along with the Folder structure
+		List<String> filesListNames = FileOperations.listFilesInDirectory(path, 0, new ArrayList<String>());
+
+		System.out.println("Display all the files in Ascending Order\n");
+		Collections.sort(filesListNames);
+
+		filesListNames.stream().forEach(System.out::println);
+	}
+	public static void deleteFileRecursively(String path) {
+
+		File currFile = new File(path);
+		File[] files = currFile.listFiles();
+
+		if (files != null && files.length > 0) {
+			for (File file : files) {
+
+				String fileName = file.getName() + " at " + file.getParent();
+				if (file.isDirectory()) {
+					deleteFileRecursively(file.getAbsolutePath());
+				}
+
+				if (file.delete()) {
+					System.out.println(fileName + " deleted successfully");
+				} else {
+					System.out.println("Failed to delete " + fileName);
+				}
+			}
+		}
+
+		String currFileName = currFile.getName() + " at " + currFile.getParent();
+		if (currFile.delete()) {
+			System.out.println(currFileName + " deleted successfully");
+		} else {
+			System.out.println("Failed to delete " + currFileName);
+		}
+	}
 }
 
 ----------------------------------- SOURCE END -------------------------------------
@@ -269,114 +562,8 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3504)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3087)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
-	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
-	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
-	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1271)
-	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
-	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
-	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
-	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
-	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
-	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.jdt.core.manipulation 4 2 2022-03-27 22:42:13.054
-!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
-!STACK 0
-java.lang.IllegalArgumentException
-	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
-	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3504)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3087)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
-	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
-	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
-	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1271)
-	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
-	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
-	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
-	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
-	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
-	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.jdt.core.manipulation 4 0 2022-03-27 22:42:13.055
-!MESSAGE Error in JDT Core during AST creation
-!STACK 0
-java.lang.IllegalArgumentException
-	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
-	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3504)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3087)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
-	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
-	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
-	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1271)
-	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
-	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
-	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
-	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
-	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
-	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.jdt.core 4 4 2022-03-28 00:20:21.925
-!MESSAGE Exception occurred during compilation unit conversion:
------------------------------------ SOURCE BEGIN -------------------------------------
-
-public class StringOperations {
-
-	public static void main(String[] args) {
-		String s="hello";
-		s.concat("world");
-		System.out.println/9
-
-	}
-
-}
-
------------------------------------ SOURCE END -------------------------------------
-!STACK 0
-java.lang.IllegalArgumentException
-	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
-	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
-	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
 	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
@@ -401,7 +588,7 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
 
-!ENTRY org.eclipse.jdt.ui 4 2 2022-03-28 00:20:21.935
+!ENTRY org.eclipse.jdt.ui 4 2 2022-04-10 23:54:06.074
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
 !STACK 0
 java.lang.IllegalArgumentException
@@ -413,6 +600,10 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
 	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
@@ -437,7 +628,7 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
 
-!ENTRY org.eclipse.jdt.ui 4 0 2022-03-28 00:20:21.937
+!ENTRY org.eclipse.jdt.ui 4 0 2022-04-10 23:54:06.075
 !MESSAGE Error in JDT Core during reconcile
 !STACK 0
 java.lang.IllegalArgumentException
@@ -449,6 +640,10 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
 	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
@@ -473,19 +668,201 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
 
-!ENTRY org.eclipse.jdt.core 4 4 2022-03-28 00:20:21.978
+!ENTRY org.eclipse.jdt.core 4 4 2022-04-10 23:54:11.779
 !MESSAGE Exception occurred during compilation unit conversion:
 ----------------------------------- SOURCE BEGIN -------------------------------------
+package com.lockedme;
 
-public class StringOperations {
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
-	public static void main(String[] args) {
-		String s="hello";
-		s.concat("world");
-		System.out.println/9
+public class FileOperations {
 
+	//invalid characters in file or filename
+	
+	public static final String REGEX_PATTERN = "^[A-za-z0-9.]{1,255}$";
+	
+	public static boolean validateStringFilenameUsingRegex(String path) {
+	    if (path == null) {
+	        return false;
+	    }
+	    return path.matches(REGEX_PATTERN);
+	    
+	}
+	
+	//folder related
+	public static String folderName;
+	public static String path;
+	
+	public static String getFolderName() {
+		Scanner sc1 = new Scanner(System.in);
+		if (sc1.next().endsWith("\\")) {
+			
+		}
+		String folderName = sc1.next();	
+		if (!folderName.endsWith("\\")) {
+			(folderName+"\\");}
+		return folderName;
+		}
+	
+	
+	public static void createFolderIfNotPresent(String folderName) {
+		File folder = new File(folderName);
+
+		try{// If the Folder doesn't exist
+			folder.mkdirs();
+		} catch (Exception e) {
+			System.out.println("Failed to create folder " + folderName);
+			System.out.println(e.getClass().getName());
+		}
+	}
+	
+	//file related
+	public static List<String> listFilesInDirectory(String path, int indentationCount, List<String> fileListNames) {
+		File dir = new File(path);
+		File[] files = dir.listFiles();
+		List<File> filesList = Arrays.asList(files);
+
+		Collections.sort(filesList);
+
+		if (files != null && files.length > 0) {
+			for (File file : filesList) {
+
+				System.out.print(" ".repeat(indentationCount * 2));
+
+				if (file.isDirectory()) {
+					System.out.println("`-- " + file.getName());
+
+					//The Recursively indent and displaying all the files
+					fileListNames.add(file.getName());
+					listFilesInDirectory(file.getAbsolutePath(), indentationCount + 1, fileListNames);
+				} else {
+					System.out.println("|-- " + file.getName());
+					fileListNames.add(file.getName());
+				}
+			}
+		} else {
+			System.out.print(" ".repeat(indentationCount * 2));
+			System.out.println("|-- Empty Directory");
+		}
+		System.out.println();
+		return fileListNames;
 	}
 
+	public static void createFile(String folderName,String fileToAdd, Scanner sc) {
+		Path pathToFile = Paths.get(folderName + fileToAdd);
+		try {
+			Files.createDirectories(pathToFile.getParent());
+			Files.createFile(pathToFile);
+			System.out.println(fileToAdd + "is been created successfully");
+
+			System.out.println("Would you like to add some content to the file? (Y/N)");
+			String choice = sc.next().toLowerCase();
+
+			sc.nextLine();
+			if (choice.equals("y")) {
+				System.out.println("\n\nInput content and press the enter\n");
+				String content = sc.nextLine();
+				Files.write(pathToFile, content.getBytes());
+				System.out.println("\nContent written to file " + fileToAdd);
+				System.out.println("The Content can be read by using Notepad or Notepad++");
+			}
+
+		} catch (IOException e) {
+			System.out.println("Failed to create the file " + fileToAdd);
+			System.out.println(e.getClass().getName());
+		}
+	}
+
+	public static List<String> displayFileLocations(String fileName, String path) {
+		List<String> fileListNames = new ArrayList<>();
+		FileOperations.searchFileRecursively(path, fileName, fileListNames);
+
+		if (fileListNames.isEmpty()) {
+			System.out.println("\n\n***** Could not find any file with the given file name \"" + fileName + "\" *****\n\n");
+		} else {
+			System.out.println("\n\nFound file at the below location(s):");
+
+			List<String> files = IntStream.range(0, fileListNames.size())
+					.mapToObj(index -> (index + 1) + ": " + fileListNames.get(index)).collect(Collectors.toList());
+
+			files.forEach(System.out::println);
+		}
+
+		return fileListNames;
+	}
+
+	public static void searchFileRecursively(String path, String fileName, List<String> fileListNames) {
+		File dir = new File(path);
+		File[] files = dir.listFiles();
+		List<File> filesList = Arrays.asList(files);
+
+		if (files != null && files.length > 0) {
+			for (File file : filesList) {
+
+				if (file.getName().startsWith(fileName)) {
+					fileListNames.add(file.getAbsolutePath());
+				}
+
+				//  the need to search in the directories separately to ensuring  all the files of required file name is been searched.
+				
+				if (file.isDirectory()) {
+					searchFileRecursively(file.getAbsolutePath(), fileName, fileListNames);
+				}
+			}
+		}
+	}
+
+	public static void displayAllFiles(String path) {
+		// All The required files and folders inside user specified folder
+		System.out.println("Display all the files with directory structure in the Ascending order\n");
+		System.out.println(path);
+		// List the Files in the Directory displays files along with the Folder structure
+		List<String> filesListNames = FileOperations.listFilesInDirectory(path, 0, new ArrayList<String>());
+
+		System.out.println("Display all the files in Ascending Order\n");
+		Collections.sort(filesListNames);
+
+		filesListNames.stream().forEach(System.out::println);
+	}
+	public static void deleteFileRecursively(String path) {
+
+		File currFile = new File(path);
+		File[] files = currFile.listFiles();
+
+		if (files != null && files.length > 0) {
+			for (File file : files) {
+
+				String fileName = file.getName() + " at " + file.getParent();
+				if (file.isDirectory()) {
+					deleteFileRecursively(file.getAbsolutePath());
+				}
+
+				if (file.delete()) {
+					System.out.println(fileName + " deleted successfully");
+				} else {
+					System.out.println("Failed to delete " + fileName);
+				}
+			}
+		}
+
+		String currFileName = currFile.getName() + " at " + currFile.getParent();
+		if (currFile.delete()) {
+			System.out.println(currFileName + " deleted successfully");
+		} else {
+			System.out.println("Failed to delete " + currFileName);
+		}
+	}
 }
 
 ----------------------------------- SOURCE END -------------------------------------
@@ -499,6 +876,10 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
 	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
@@ -511,11 +892,68 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
 	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
 	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
-	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
-	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.getClipboardData(ClipboardOperationAction.java:479)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.doCutCopyWithImportsOperation(ClipboardOperationAction.java:406)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.internalDoOperation(ClipboardOperationAction.java:365)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.run(ClipboardOperationAction.java:286)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:121)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor76.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:317)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:251)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:580)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:647)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:439)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1280)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1062)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1114)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1110)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1539)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4868)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4746)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
 
-!ENTRY org.eclipse.jdt.core.manipulation 4 2 2022-03-28 00:20:21.980
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2022-04-10 23:54:11.780
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
 !STACK 0
 java.lang.IllegalArgumentException
@@ -527,6 +965,10 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
 	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
@@ -539,11 +981,68 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
 	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
 	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
-	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
-	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.getClipboardData(ClipboardOperationAction.java:479)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.doCutCopyWithImportsOperation(ClipboardOperationAction.java:406)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.internalDoOperation(ClipboardOperationAction.java:365)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.run(ClipboardOperationAction.java:286)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:121)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor76.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:317)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:251)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:580)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:647)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:439)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1280)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1062)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1114)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1110)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1539)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4868)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4746)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
 
-!ENTRY org.eclipse.jdt.core.manipulation 4 0 2022-03-28 00:20:21.981
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2022-04-10 23:54:11.781
 !MESSAGE Error in JDT Core during AST creation
 !STACK 0
 java.lang.IllegalArgumentException
@@ -555,6 +1054,10 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
 	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
@@ -567,23 +1070,262 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
 	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
 	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
-	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
-	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.getClipboardData(ClipboardOperationAction.java:479)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.doCutCopyWithImportsOperation(ClipboardOperationAction.java:406)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.internalDoOperation(ClipboardOperationAction.java:365)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.jdt.internal.ui.javaeditor.ClipboardOperationAction.run(ClipboardOperationAction.java:286)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:121)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor76.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:317)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:251)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:580)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:647)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:439)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1280)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1062)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1114)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1110)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1539)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4868)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4746)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
 
-!ENTRY org.eclipse.jdt.core 4 4 2022-03-28 00:20:23.415
+!ENTRY org.eclipse.jdt.core 4 4 2022-04-10 23:54:12.341
 !MESSAGE Exception occurred during compilation unit conversion:
 ----------------------------------- SOURCE BEGIN -------------------------------------
+package com.lockedme;
 
-public class StringOperations {
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
-	public static void main(String[] args) {
-		String s="hello";
-		s.concat("world");
-		System.out.println/9
+public class FileOperations {
 
+	//invalid characters in file or filename
+	
+	public static final String REGEX_PATTERN = "^[A-za-z0-9.]{1,255}$";
+	
+	public static boolean validateStringFilenameUsingRegex(String path) {
+	    if (path == null) {
+	        return false;
+	    }
+	    return path.matches(REGEX_PATTERN);
+	    
+	}
+	
+	//folder related
+	public static String folderName;
+	public static String path;
+	
+	public static String getFolderName() {
+		Scanner sc1 = new Scanner(System.in);
+		if (sc1.next().endsWith("\\")) {
+			
+		}
+		
+		if (!folderName.endsWith("\\")) {
+			(folderName+"\\");}
+		return folderName;
+		}
+	
+	
+	public static void createFolderIfNotPresent(String folderName) {
+		File folder = new File(folderName);
+
+		try{// If the Folder doesn't exist
+			folder.mkdirs();
+		} catch (Exception e) {
+			System.out.println("Failed to create folder " + folderName);
+			System.out.println(e.getClass().getName());
+		}
+	}
+	
+	//file related
+	public static List<String> listFilesInDirectory(String path, int indentationCount, List<String> fileListNames) {
+		File dir = new File(path);
+		File[] files = dir.listFiles();
+		List<File> filesList = Arrays.asList(files);
+
+		Collections.sort(filesList);
+
+		if (files != null && files.length > 0) {
+			for (File file : filesList) {
+
+				System.out.print(" ".repeat(indentationCount * 2));
+
+				if (file.isDirectory()) {
+					System.out.println("`-- " + file.getName());
+
+					//The Recursively indent and displaying all the files
+					fileListNames.add(file.getName());
+					listFilesInDirectory(file.getAbsolutePath(), indentationCount + 1, fileListNames);
+				} else {
+					System.out.println("|-- " + file.getName());
+					fileListNames.add(file.getName());
+				}
+			}
+		} else {
+			System.out.print(" ".repeat(indentationCount * 2));
+			System.out.println("|-- Empty Directory");
+		}
+		System.out.println();
+		return fileListNames;
 	}
 
+	public static void createFile(String folderName,String fileToAdd, Scanner sc) {
+		Path pathToFile = Paths.get(folderName + fileToAdd);
+		try {
+			Files.createDirectories(pathToFile.getParent());
+			Files.createFile(pathToFile);
+			System.out.println(fileToAdd + "is been created successfully");
+
+			System.out.println("Would you like to add some content to the file? (Y/N)");
+			String choice = sc.next().toLowerCase();
+
+			sc.nextLine();
+			if (choice.equals("y")) {
+				System.out.println("\n\nInput content and press the enter\n");
+				String content = sc.nextLine();
+				Files.write(pathToFile, content.getBytes());
+				System.out.println("\nContent written to file " + fileToAdd);
+				System.out.println("The Content can be read by using Notepad or Notepad++");
+			}
+
+		} catch (IOException e) {
+			System.out.println("Failed to create the file " + fileToAdd);
+			System.out.println(e.getClass().getName());
+		}
+	}
+
+	public static List<String> displayFileLocations(String fileName, String path) {
+		List<String> fileListNames = new ArrayList<>();
+		FileOperations.searchFileRecursively(path, fileName, fileListNames);
+
+		if (fileListNames.isEmpty()) {
+			System.out.println("\n\n***** Could not find any file with the given file name \"" + fileName + "\" *****\n\n");
+		} else {
+			System.out.println("\n\nFound file at the below location(s):");
+
+			List<String> files = IntStream.range(0, fileListNames.size())
+					.mapToObj(index -> (index + 1) + ": " + fileListNames.get(index)).collect(Collectors.toList());
+
+			files.forEach(System.out::println);
+		}
+
+		return fileListNames;
+	}
+
+	public static void searchFileRecursively(String path, String fileName, List<String> fileListNames) {
+		File dir = new File(path);
+		File[] files = dir.listFiles();
+		List<File> filesList = Arrays.asList(files);
+
+		if (files != null && files.length > 0) {
+			for (File file : filesList) {
+
+				if (file.getName().startsWith(fileName)) {
+					fileListNames.add(file.getAbsolutePath());
+				}
+
+				//  the need to search in the directories separately to ensuring  all the files of required file name is been searched.
+				
+				if (file.isDirectory()) {
+					searchFileRecursively(file.getAbsolutePath(), fileName, fileListNames);
+				}
+			}
+		}
+	}
+
+	public static void displayAllFiles(String path) {
+		// All The required files and folders inside user specified folder
+		System.out.println("Display all the files with directory structure in the Ascending order\n");
+		System.out.println(path);
+		// List the Files in the Directory displays files along with the Folder structure
+		List<String> filesListNames = FileOperations.listFilesInDirectory(path, 0, new ArrayList<String>());
+
+		System.out.println("Display all the files in Ascending Order\n");
+		Collections.sort(filesListNames);
+
+		filesListNames.stream().forEach(System.out::println);
+	}
+	public static void deleteFileRecursively(String path) {
+
+		File currFile = new File(path);
+		File[] files = currFile.listFiles();
+
+		if (files != null && files.length > 0) {
+			for (File file : files) {
+
+				String fileName = file.getName() + " at " + file.getParent();
+				if (file.isDirectory()) {
+					deleteFileRecursively(file.getAbsolutePath());
+				}
+
+				if (file.delete()) {
+					System.out.println(fileName + " deleted successfully");
+				} else {
+					System.out.println("Failed to delete " + fileName);
+				}
+			}
+		}
+
+		String currFileName = currFile.getName() + " at " + currFile.getParent();
+		if (currFile.delete()) {
+			System.out.println(currFileName + " deleted successfully");
+		} else {
+			System.out.println("Failed to delete " + currFileName);
+		}
+	}
 }
 
 ----------------------------------- SOURCE END -------------------------------------
@@ -597,6 +1339,10 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
 	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
@@ -621,7 +1367,7 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
 
-!ENTRY org.eclipse.jdt.ui 4 2 2022-03-28 00:20:23.416
+!ENTRY org.eclipse.jdt.ui 4 2 2022-04-10 23:54:12.342
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
 !STACK 0
 java.lang.IllegalArgumentException
@@ -633,6 +1379,10 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
 	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
@@ -657,7 +1407,7 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
 
-!ENTRY org.eclipse.jdt.ui 4 0 2022-03-28 00:20:23.417
+!ENTRY org.eclipse.jdt.ui 4 0 2022-04-10 23:54:12.342
 !MESSAGE Error in JDT Core during reconcile
 !STACK 0
 java.lang.IllegalArgumentException
@@ -669,6 +1419,10 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
 	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
@@ -693,19 +1447,201 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
 
-!ENTRY org.eclipse.jdt.core 4 4 2022-03-28 00:20:23.493
+!ENTRY org.eclipse.jdt.core 4 4 2022-04-10 23:54:13.708
 !MESSAGE Exception occurred during compilation unit conversion:
 ----------------------------------- SOURCE BEGIN -------------------------------------
+package com.lockedme;
 
-public class StringOperations {
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
-	public static void main(String[] args) {
-		String s="hello";
-		s.concat("world");
-		System.out.println/9
+public class FileOperations {
 
+	//invalid characters in file or filename
+	
+	public static final String REGEX_PATTERN = "^[A-za-z0-9.]{1,255}$";
+	
+	public static boolean validateStringFilenameUsingRegex(String path) {
+	    if (path == null) {
+	        return false;
+	    }
+	    return path.matches(REGEX_PATTERN);
+	    
+	}
+	
+	//folder related
+	public static String folderName;
+	public static String path;
+	
+	public static String getFolderName() {
+		Scanner sc1 = new Scanner(System.in);
+		if (sc1.next().endsWith("\\")) {
+			String folderName = sc1.next();	
+		}
+		
+		if (!folderName.endsWith("\\")) {
+			(folderName+"\\");}
+		return folderName;
+		}
+	
+	
+	public static void createFolderIfNotPresent(String folderName) {
+		File folder = new File(folderName);
+
+		try{// If the Folder doesn't exist
+			folder.mkdirs();
+		} catch (Exception e) {
+			System.out.println("Failed to create folder " + folderName);
+			System.out.println(e.getClass().getName());
+		}
+	}
+	
+	//file related
+	public static List<String> listFilesInDirectory(String path, int indentationCount, List<String> fileListNames) {
+		File dir = new File(path);
+		File[] files = dir.listFiles();
+		List<File> filesList = Arrays.asList(files);
+
+		Collections.sort(filesList);
+
+		if (files != null && files.length > 0) {
+			for (File file : filesList) {
+
+				System.out.print(" ".repeat(indentationCount * 2));
+
+				if (file.isDirectory()) {
+					System.out.println("`-- " + file.getName());
+
+					//The Recursively indent and displaying all the files
+					fileListNames.add(file.getName());
+					listFilesInDirectory(file.getAbsolutePath(), indentationCount + 1, fileListNames);
+				} else {
+					System.out.println("|-- " + file.getName());
+					fileListNames.add(file.getName());
+				}
+			}
+		} else {
+			System.out.print(" ".repeat(indentationCount * 2));
+			System.out.println("|-- Empty Directory");
+		}
+		System.out.println();
+		return fileListNames;
 	}
 
+	public static void createFile(String folderName,String fileToAdd, Scanner sc) {
+		Path pathToFile = Paths.get(folderName + fileToAdd);
+		try {
+			Files.createDirectories(pathToFile.getParent());
+			Files.createFile(pathToFile);
+			System.out.println(fileToAdd + "is been created successfully");
+
+			System.out.println("Would you like to add some content to the file? (Y/N)");
+			String choice = sc.next().toLowerCase();
+
+			sc.nextLine();
+			if (choice.equals("y")) {
+				System.out.println("\n\nInput content and press the enter\n");
+				String content = sc.nextLine();
+				Files.write(pathToFile, content.getBytes());
+				System.out.println("\nContent written to file " + fileToAdd);
+				System.out.println("The Content can be read by using Notepad or Notepad++");
+			}
+
+		} catch (IOException e) {
+			System.out.println("Failed to create the file " + fileToAdd);
+			System.out.println(e.getClass().getName());
+		}
+	}
+
+	public static List<String> displayFileLocations(String fileName, String path) {
+		List<String> fileListNames = new ArrayList<>();
+		FileOperations.searchFileRecursively(path, fileName, fileListNames);
+
+		if (fileListNames.isEmpty()) {
+			System.out.println("\n\n***** Could not find any file with the given file name \"" + fileName + "\" *****\n\n");
+		} else {
+			System.out.println("\n\nFound file at the below location(s):");
+
+			List<String> files = IntStream.range(0, fileListNames.size())
+					.mapToObj(index -> (index + 1) + ": " + fileListNames.get(index)).collect(Collectors.toList());
+
+			files.forEach(System.out::println);
+		}
+
+		return fileListNames;
+	}
+
+	public static void searchFileRecursively(String path, String fileName, List<String> fileListNames) {
+		File dir = new File(path);
+		File[] files = dir.listFiles();
+		List<File> filesList = Arrays.asList(files);
+
+		if (files != null && files.length > 0) {
+			for (File file : filesList) {
+
+				if (file.getName().startsWith(fileName)) {
+					fileListNames.add(file.getAbsolutePath());
+				}
+
+				//  the need to search in the directories separately to ensuring  all the files of required file name is been searched.
+				
+				if (file.isDirectory()) {
+					searchFileRecursively(file.getAbsolutePath(), fileName, fileListNames);
+				}
+			}
+		}
+	}
+
+	public static void displayAllFiles(String path) {
+		// All The required files and folders inside user specified folder
+		System.out.println("Display all the files with directory structure in the Ascending order\n");
+		System.out.println(path);
+		// List the Files in the Directory displays files along with the Folder structure
+		List<String> filesListNames = FileOperations.listFilesInDirectory(path, 0, new ArrayList<String>());
+
+		System.out.println("Display all the files in Ascending Order\n");
+		Collections.sort(filesListNames);
+
+		filesListNames.stream().forEach(System.out::println);
+	}
+	public static void deleteFileRecursively(String path) {
+
+		File currFile = new File(path);
+		File[] files = currFile.listFiles();
+
+		if (files != null && files.length > 0) {
+			for (File file : files) {
+
+				String fileName = file.getName() + " at " + file.getParent();
+				if (file.isDirectory()) {
+					deleteFileRecursively(file.getAbsolutePath());
+				}
+
+				if (file.delete()) {
+					System.out.println(fileName + " deleted successfully");
+				} else {
+					System.out.println("Failed to delete " + fileName);
+				}
+			}
+		}
+
+		String currFileName = currFile.getName() + " at " + currFile.getParent();
+		if (currFile.delete()) {
+			System.out.println(currFileName + " deleted successfully");
+		} else {
+			System.out.println("Failed to delete " + currFileName);
+		}
+	}
 }
 
 ----------------------------------- SOURCE END -------------------------------------
@@ -719,6 +1655,978 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-04-10 23:54:13.709
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-04-10 23:54:13.709
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-04-10 23:54:19.313
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package com.lockedme;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+public class FileOperations {
+
+	//invalid characters in file or filename
+	
+	public static final String REGEX_PATTERN = "^[A-za-z0-9.]{1,255}$";
+	
+	public static boolean validateStringFilenameUsingRegex(String path) {
+	    if (path == null) {
+	        return false;
+	    }
+	    return path.matches(REGEX_PATTERN);
+	    
+	}
+	
+	//folder related
+	public static String folderName;
+	public static String path;
+	
+	public static String getFolderName() {
+		Scanner sc1 = new Scanner(System.in);
+		if (sc1.next().endsWith("\\")) {
+			String folderName = sc1.next();	
+		}else
+		
+		if (!folderName.endsWith("\\")) {
+			(folderName+"\\");}
+		return folderName;
+		}
+	
+	
+	public static void createFolderIfNotPresent(String folderName) {
+		File folder = new File(folderName);
+
+		try{// If the Folder doesn't exist
+			folder.mkdirs();
+		} catch (Exception e) {
+			System.out.println("Failed to create folder " + folderName);
+			System.out.println(e.getClass().getName());
+		}
+	}
+	
+	//file related
+	public static List<String> listFilesInDirectory(String path, int indentationCount, List<String> fileListNames) {
+		File dir = new File(path);
+		File[] files = dir.listFiles();
+		List<File> filesList = Arrays.asList(files);
+
+		Collections.sort(filesList);
+
+		if (files != null && files.length > 0) {
+			for (File file : filesList) {
+
+				System.out.print(" ".repeat(indentationCount * 2));
+
+				if (file.isDirectory()) {
+					System.out.println("`-- " + file.getName());
+
+					//The Recursively indent and displaying all the files
+					fileListNames.add(file.getName());
+					listFilesInDirectory(file.getAbsolutePath(), indentationCount + 1, fileListNames);
+				} else {
+					System.out.println("|-- " + file.getName());
+					fileListNames.add(file.getName());
+				}
+			}
+		} else {
+			System.out.print(" ".repeat(indentationCount * 2));
+			System.out.println("|-- Empty Directory");
+		}
+		System.out.println();
+		return fileListNames;
+	}
+
+	public static void createFile(String folderName,String fileToAdd, Scanner sc) {
+		Path pathToFile = Paths.get(folderName + fileToAdd);
+		try {
+			Files.createDirectories(pathToFile.getParent());
+			Files.createFile(pathToFile);
+			System.out.println(fileToAdd + "is been created successfully");
+
+			System.out.println("Would you like to add some content to the file? (Y/N)");
+			String choice = sc.next().toLowerCase();
+
+			sc.nextLine();
+			if (choice.equals("y")) {
+				System.out.println("\n\nInput content and press the enter\n");
+				String content = sc.nextLine();
+				Files.write(pathToFile, content.getBytes());
+				System.out.println("\nContent written to file " + fileToAdd);
+				System.out.println("The Content can be read by using Notepad or Notepad++");
+			}
+
+		} catch (IOException e) {
+			System.out.println("Failed to create the file " + fileToAdd);
+			System.out.println(e.getClass().getName());
+		}
+	}
+
+	public static List<String> displayFileLocations(String fileName, String path) {
+		List<String> fileListNames = new ArrayList<>();
+		FileOperations.searchFileRecursively(path, fileName, fileListNames);
+
+		if (fileListNames.isEmpty()) {
+			System.out.println("\n\n***** Could not find any file with the given file name \"" + fileName + "\" *****\n\n");
+		} else {
+			System.out.println("\n\nFound file at the below location(s):");
+
+			List<String> files = IntStream.range(0, fileListNames.size())
+					.mapToObj(index -> (index + 1) + ": " + fileListNames.get(index)).collect(Collectors.toList());
+
+			files.forEach(System.out::println);
+		}
+
+		return fileListNames;
+	}
+
+	public static void searchFileRecursively(String path, String fileName, List<String> fileListNames) {
+		File dir = new File(path);
+		File[] files = dir.listFiles();
+		List<File> filesList = Arrays.asList(files);
+
+		if (files != null && files.length > 0) {
+			for (File file : filesList) {
+
+				if (file.getName().startsWith(fileName)) {
+					fileListNames.add(file.getAbsolutePath());
+				}
+
+				//  the need to search in the directories separately to ensuring  all the files of required file name is been searched.
+				
+				if (file.isDirectory()) {
+					searchFileRecursively(file.getAbsolutePath(), fileName, fileListNames);
+				}
+			}
+		}
+	}
+
+	public static void displayAllFiles(String path) {
+		// All The required files and folders inside user specified folder
+		System.out.println("Display all the files with directory structure in the Ascending order\n");
+		System.out.println(path);
+		// List the Files in the Directory displays files along with the Folder structure
+		List<String> filesListNames = FileOperations.listFilesInDirectory(path, 0, new ArrayList<String>());
+
+		System.out.println("Display all the files in Ascending Order\n");
+		Collections.sort(filesListNames);
+
+		filesListNames.stream().forEach(System.out::println);
+	}
+	public static void deleteFileRecursively(String path) {
+
+		File currFile = new File(path);
+		File[] files = currFile.listFiles();
+
+		if (files != null && files.length > 0) {
+			for (File file : files) {
+
+				String fileName = file.getName() + " at " + file.getParent();
+				if (file.isDirectory()) {
+					deleteFileRecursively(file.getAbsolutePath());
+				}
+
+				if (file.delete()) {
+					System.out.println(fileName + " deleted successfully");
+				} else {
+					System.out.println("Failed to delete " + fileName);
+				}
+			}
+		}
+
+		String currFileName = currFile.getName() + " at " + currFile.getParent();
+		if (currFile.delete()) {
+			System.out.println(currFileName + " deleted successfully");
+		} else {
+			System.out.println("Failed to delete " + currFileName);
+		}
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2248)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-04-10 23:54:19.314
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2248)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-04-10 23:54:19.314
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2248)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-04-10 23:55:07.840
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package com.lockedme;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+public class FileOperations {
+
+	//invalid characters in file or filename
+	
+	public static final String REGEX_PATTERN = "^[A-za-z0-9.]{1,255}$";
+	
+	public static boolean validateStringFilenameUsingRegex(String path) {
+	    if (path == null) {
+	        return false;
+	    }
+	    return path.matches(REGEX_PATTERN);
+	    
+	}
+	
+	//folder related
+	public static String folderName;
+	public static String path;
+	
+	public static String getFolderName() {
+		Scanner sc1 = new Scanner(System.in);
+		if (sc1.next().endsWith("\\")) {
+			String folderName = sc1.next();	
+		}else {
+		
+		if (!folderName.endsWith("\\")) {
+			(folderName+"\\");}
+		;
+		return folderName}
+	
+	public static void createFolderIfNotPresent(String folderName) {
+		File folder = new File(folderName);
+
+		try{// If the Folder doesn't exist
+			folder.mkdirs();
+		} catch (Exception e) {
+			System.out.println("Failed to create folder " + folderName);
+			System.out.println(e.getClass().getName());
+		}
+	}
+	
+	//file related
+	public static List<String> listFilesInDirectory(String path, int indentationCount, List<String> fileListNames) {
+		File dir = new File(path);
+		File[] files = dir.listFiles();
+		List<File> filesList = Arrays.asList(files);
+
+		Collections.sort(filesList);
+
+		if (files != null && files.length > 0) {
+			for (File file : filesList) {
+
+				System.out.print(" ".repeat(indentationCount * 2));
+
+				if (file.isDirectory()) {
+					System.out.println("`-- " + file.getName());
+
+					//The Recursively indent and displaying all the files
+					fileListNames.add(file.getName());
+					listFilesInDirectory(file.getAbsolutePath(), indentationCount + 1, fileListNames);
+				} else {
+					System.out.println("|-- " + file.getName());
+					fileListNames.add(file.getName());
+				}
+			}
+		} else {
+			System.out.print(" ".repeat(indentationCount * 2));
+			System.out.println("|-- Empty Directory");
+		}
+		System.out.println();
+		return fileListNames;
+	}
+
+	public static void createFile(String folderName,String fileToAdd, Scanner sc) {
+		Path pathToFile = Paths.get(folderName + fileToAdd);
+		try {
+			Files.createDirectories(pathToFile.getParent());
+			Files.createFile(pathToFile);
+			System.out.println(fileToAdd + "is been created successfully");
+
+			System.out.println("Would you like to add some content to the file? (Y/N)");
+			String choice = sc.next().toLowerCase();
+
+			sc.nextLine();
+			if (choice.equals("y")) {
+				System.out.println("\n\nInput content and press the enter\n");
+				String content = sc.nextLine();
+				Files.write(pathToFile, content.getBytes());
+				System.out.println("\nContent written to file " + fileToAdd);
+				System.out.println("The Content can be read by using Notepad or Notepad++");
+			}
+
+		} catch (IOException e) {
+			System.out.println("Failed to create the file " + fileToAdd);
+			System.out.println(e.getClass().getName());
+		}
+	}
+
+	public static List<String> displayFileLocations(String fileName, String path) {
+		List<String> fileListNames = new ArrayList<>();
+		FileOperations.searchFileRecursively(path, fileName, fileListNames);
+
+		if (fileListNames.isEmpty()) {
+			System.out.println("\n\n***** Could not find any file with the given file name \"" + fileName + "\" *****\n\n");
+		} else {
+			System.out.println("\n\nFound file at the below location(s):");
+
+			List<String> files = IntStream.range(0, fileListNames.size())
+					.mapToObj(index -> (index + 1) + ": " + fileListNames.get(index)).collect(Collectors.toList());
+
+			files.forEach(System.out::println);
+		}
+
+		return fileListNames;
+	}
+
+	public static void searchFileRecursively(String path, String fileName, List<String> fileListNames) {
+		File dir = new File(path);
+		File[] files = dir.listFiles();
+		List<File> filesList = Arrays.asList(files);
+
+		if (files != null && files.length > 0) {
+			for (File file : filesList) {
+
+				if (file.getName().startsWith(fileName)) {
+					fileListNames.add(file.getAbsolutePath());
+				}
+
+				//  the need to search in the directories separately to ensuring  all the files of required file name is been searched.
+				
+				if (file.isDirectory()) {
+					searchFileRecursively(file.getAbsolutePath(), fileName, fileListNames);
+				}
+			}
+		}
+	}
+
+	public static void displayAllFiles(String path) {
+		// All The required files and folders inside user specified folder
+		System.out.println("Display all the files with directory structure in the Ascending order\n");
+		System.out.println(path);
+		// List the Files in the Directory displays files along with the Folder structure
+		List<String> filesListNames = FileOperations.listFilesInDirectory(path, 0, new ArrayList<String>());
+
+		System.out.println("Display all the files in Ascending Order\n");
+		Collections.sort(filesListNames);
+
+		filesListNames.stream().forEach(System.out::println);
+	}
+	public static void deleteFileRecursively(String path) {
+
+		File currFile = new File(path);
+		File[] files = currFile.listFiles();
+
+		if (files != null && files.length > 0) {
+			for (File file : files) {
+
+				String fileName = file.getName() + " at " + file.getParent();
+				if (file.isDirectory()) {
+					deleteFileRecursively(file.getAbsolutePath());
+				}
+
+				if (file.delete()) {
+					System.out.println(fileName + " deleted successfully");
+				} else {
+					System.out.println("Failed to delete " + fileName);
+				}
+			}
+		}
+
+		String currFileName = currFile.getName() + " at " + currFile.getParent();
+		if (currFile.delete()) {
+			System.out.println(currFileName + " deleted successfully");
+		} else {
+			System.out.println("Failed to delete " + currFileName);
+		}
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2248)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-04-10 23:55:07.841
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2248)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-04-10 23:55:07.842
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2248)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-04-10 23:55:11.877
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package com.lockedme;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+public class FileOperations {
+
+	//invalid characters in file or filename
+	
+	public static final String REGEX_PATTERN = "^[A-za-z0-9.]{1,255}$";
+	
+	public static boolean validateStringFilenameUsingRegex(String path) {
+	    if (path == null) {
+	        return false;
+	    }
+	    return path.matches(REGEX_PATTERN);
+	    
+	}
+	
+	//folder related
+	public static String folderName;
+	public static String path;
+	
+	public static String getFolderName() {
+		Scanner sc1 = new Scanner(System.in);
+		if (sc1.next().endsWith("\\")) {
+			String folderName = sc1.next();	
+		}else {
+		
+		if (!folderName.endsWith("\\")) {
+			(folderName+"\\");}
+		;
+		return folderName}
+	
+	public static void createFolderIfNotPresent(String folderName) {
+		File folder = new File(folderName);
+
+		try{// If the Folder doesn't exist
+			folder.mkdirs();
+		} catch (Exception e) {
+			System.out.println("Failed to create folder " + folderName);
+			System.out.println(e.getClass().getName());
+		}
+	}
+	
+	//file related
+	public static List<String> listFilesInDirectory(String path, int indentationCount, List<String> fileListNames) {
+		File dir = new File(path);
+		File[] files = dir.listFiles();
+		List<File> filesList = Arrays.asList(files);
+
+		Collections.sort(filesList);
+
+		if (files != null && files.length > 0) {
+			for (File file : filesList) {
+
+				System.out.print(" ".repeat(indentationCount * 2));
+
+				if (file.isDirectory()) {
+					System.out.println("`-- " + file.getName());
+
+					//The Recursively indent and displaying all the files
+					fileListNames.add(file.getName());
+					listFilesInDirectory(file.getAbsolutePath(), indentationCount + 1, fileListNames);
+				} else {
+					System.out.println("|-- " + file.getName());
+					fileListNames.add(file.getName());
+				}
+			}
+		} else {
+			System.out.print(" ".repeat(indentationCount * 2));
+			System.out.println("|-- Empty Directory");
+		}
+		System.out.println();
+		return fileListNames;
+	}
+
+	public static void createFile(String folderName,String fileToAdd, Scanner sc) {
+		Path pathToFile = Paths.get(folderName + fileToAdd);
+		try {
+			Files.createDirectories(pathToFile.getParent());
+			Files.createFile(pathToFile);
+			System.out.println(fileToAdd + "is been created successfully");
+
+			System.out.println("Would you like to add some content to the file? (Y/N)");
+			String choice = sc.next().toLowerCase();
+
+			sc.nextLine();
+			if (choice.equals("y")) {
+				System.out.println("\n\nInput content and press the enter\n");
+				String content = sc.nextLine();
+				Files.write(pathToFile, content.getBytes());
+				System.out.println("\nContent written to file " + fileToAdd);
+				System.out.println("The Content can be read by using Notepad or Notepad++");
+			}
+
+		} catch (IOException e) {
+			System.out.println("Failed to create the file " + fileToAdd);
+			System.out.println(e.getClass().getName());
+		}
+	}
+
+	public static List<String> displayFileLocations(String fileName, String path) {
+		List<String> fileListNames = new ArrayList<>();
+		FileOperations.searchFileRecursively(path, fileName, fileListNames);
+
+		if (fileListNames.isEmpty()) {
+			System.out.println("\n\n***** Could not find any file with the given file name \"" + fileName + "\" *****\n\n");
+		} else {
+			System.out.println("\n\nFound file at the below location(s):");
+
+			List<String> files = IntStream.range(0, fileListNames.size())
+					.mapToObj(index -> (index + 1) + ": " + fileListNames.get(index)).collect(Collectors.toList());
+
+			files.forEach(System.out::println);
+		}
+
+		return fileListNames;
+	}
+
+	public static void searchFileRecursively(String path, String fileName, List<String> fileListNames) {
+		File dir = new File(path);
+		File[] files = dir.listFiles();
+		List<File> filesList = Arrays.asList(files);
+
+		if (files != null && files.length > 0) {
+			for (File file : filesList) {
+
+				if (file.getName().startsWith(fileName)) {
+					fileListNames.add(file.getAbsolutePath());
+				}
+
+				//  the need to search in the directories separately to ensuring  all the files of required file name is been searched.
+				
+				if (file.isDirectory()) {
+					searchFileRecursively(file.getAbsolutePath(), fileName, fileListNames);
+				}
+			}
+		}
+	}
+
+	public static void displayAllFiles(String path) {
+		// All The required files and folders inside user specified folder
+		System.out.println("Display all the files with directory structure in the Ascending order\n");
+		System.out.println(path);
+		// List the Files in the Directory displays files along with the Folder structure
+		List<String> filesListNames = FileOperations.listFilesInDirectory(path, 0, new ArrayList<String>());
+
+		System.out.println("Display all the files in Ascending Order\n");
+		Collections.sort(filesListNames);
+
+		filesListNames.stream().forEach(System.out::println);
+	}
+	public static void deleteFileRecursively(String path) {
+
+		File currFile = new File(path);
+		File[] files = currFile.listFiles();
+
+		if (files != null && files.length > 0) {
+			for (File file : files) {
+
+				String fileName = file.getName() + " at " + file.getParent();
+				if (file.isDirectory()) {
+					deleteFileRecursively(file.getAbsolutePath());
+				}
+
+				if (file.delete()) {
+					System.out.println(fileName + " deleted successfully");
+				} else {
+					System.out.println("Failed to delete " + fileName);
+				}
+			}
+		}
+
+		String currFileName = currFile.getName() + " at " + currFile.getParent();
+		if (currFile.delete()) {
+			System.out.println(currFileName + " deleted successfully");
+		} else {
+			System.out.println("Failed to delete " + currFileName);
+		}
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2248)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
 	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
@@ -735,7 +2643,7 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.jdt.core.manipulation 4 2 2022-03-28 00:20:23.494
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2022-04-10 23:55:11.878
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
 !STACK 0
 java.lang.IllegalArgumentException
@@ -747,6 +2655,14 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2248)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
 	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
@@ -763,7 +2679,7 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 
-!ENTRY org.eclipse.jdt.core.manipulation 4 0 2022-03-28 00:20:23.496
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2022-04-10 23:55:11.879
 !MESSAGE Error in JDT Core during AST creation
 !STACK 0
 java.lang.IllegalArgumentException
@@ -775,6 +2691,14 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2248)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
 	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
 	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
@@ -790,56 +2714,3 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
 	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-!SESSION 2022-04-02 21:31:41.645 -----------------------------------------------
-eclipse.buildId=4.23.0.I20220308-0310
-java.version=17.0.2
-java.vendor=Eclipse Adoptium
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_SG
-Framework arguments:  -product org.eclipse.epp.package.java.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
-
-!ENTRY org.eclipse.jface 2 0 2022-04-02 21:31:52.450
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-04-02 21:31:52.450
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
-		Open a type in a Java editor,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2c15034f,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
-		,
-		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@43b4ec0c,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-04-02 21:31:52.450
-!MESSAGE A conflict occurred for ALT+SHIFT+R:
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
-		Rename the selected element,
-		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@148b6f95,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
-		Rename the selected item,
-		Category(org.eclipse.ui.category.file,File,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5ee581db,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-
-!ENTRY org.eclipse.egit.ui 2 0 2022-04-02 21:31:58.047
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\limsi'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
