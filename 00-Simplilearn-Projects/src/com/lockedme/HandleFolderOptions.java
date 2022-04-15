@@ -18,16 +18,11 @@ public class HandleFolderOptions extends FileOperations{
 					String folderName = getFolderName();
 					if(folderName.endsWith("\\")) {
 					File file = new File(folderName);
-					if(!validateStringFilenameUsingRegex(folderName)) {
 					// If folder doesn't exist, ask user if should create
 						if (!file.exists()) {
 						HandleFolderOptions.handleFolderMenuOptions(folderName);
 					} 	else {
 						HandleFileOptions.handleWelcomeScreenInput(folderName);
-					}
-
-					} else {System.out.println("\nFilepath provided is invalid. Please try again");
-					handleFolderInput();
 					}
 						
 					}else {System.out.println("\nFilepath should end with \\. Please try again");

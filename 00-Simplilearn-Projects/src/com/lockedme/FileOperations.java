@@ -2,6 +2,7 @@ package com.lockedme;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.nio.file.InvalidPathException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,38 +17,30 @@ import java.util.stream.IntStream;
 
 public class FileOperations {
 
-	//invalid characters in file or filename
-	
-	public static final String REGEX_PATTERN = "^[A-za-z0-9.]{1,255}$";
-	
-	public static boolean validateStringFilenameUsingRegex(String path) {
-	    if (path == null) {
-	        return false;
-	    }
-	    return path.matches(REGEX_PATTERN);
-	    
-	}
-	
-	//folder related
 	public static String folderName;
 	public static String path;
 	
+	//folder related
+
 	public static String getFolderName() {
 		Scanner sc1 = new Scanner(System.in);
-		String folderName = sc1.next();	
+		String folderName = sc1.nextLine();	
 		return folderName;
 		}
 	
 	public static void createFolderIfNotPresent(String folderName) {
 		File folder = new File(folderName);
-
+		
 		try{// If the Folder doesn't exist
 			folder.mkdirs();
+			System.out.println("Folder created successfully " + folderName);
+			HandleFileOptions.handleWelcomeScreenInput(folderName);
 		} catch (Exception e) {
 			System.out.println("Failed to create folder " + folderName);
 			System.out.println(e.getClass().getName());
 		}
 	}
+	
 	
 	//file related
 	public static List<String> listFilesInDirectory(String path, int indentationCount, List<String> fileListNames) {
@@ -80,12 +73,12 @@ public class FileOperations {
 		return fileListNames;
 	}
 
-	public static void createFile(String folderName,String fileToAdd, Scanner sc) {
+	public static void createFile(String folderName,String fileToAdd, Scanner sc) throws InvalidPathException, IOException {
 		Path pathToFile = Paths.get(folderName + fileToAdd);
 		try {
 			Files.createDirectories(pathToFile.getParent());
 			Files.createFile(pathToFile);
-			System.out.println(fileToAdd + "is been created successfully");
+			System.out.println(fileToAdd + " created successfully");
 
 			System.out.println("Would you like to add some content to the file? (Y/N)");
 			String choice = sc.next().toLowerCase();
@@ -99,11 +92,12 @@ public class FileOperations {
 				System.out.println("The Content can be read by using Notepad or Notepad++");
 			}
 
-		} catch (IOException e) {
-			System.out.println("Failed to create the file " + fileToAdd);
+		} catch(InvalidPathException e){
+			throw new InvalidPathException(folderName+fileToAdd,"Invalid path provided");
+		}catch(IOException e) {
 			System.out.println(e.getClass().getName());
-		}
-	}
+	}}
+	
 
 	public static List<String> displayFileLocations(String fileName, String path) {
 		List<String> fileListNames = new ArrayList<>();
@@ -157,19 +151,21 @@ public class FileOperations {
 		Collections.sort(filesListNames);
 		
 		filesListNames.stream().forEach(System.out::println);
+
+		
 	}
 	
-	public static void deleteFileRecursively(String path) {
-
-		File currFile = new File(path);
+	public static void deleteFileRecursively(String folderName,String fileToDelete) throws FileNotFoundException {
+		File currFile = new File(folderName + fileToDelete);
 		File[] files = currFile.listFiles();
 
+		try {
 		if (files != null && files.length > 0) {
 			for (File file : files) {
 
 				String fileName = file.getName() + " at " + file.getParent();
 				if (file.isDirectory()) {
-					deleteFileRecursively(file.getAbsolutePath());
+					deleteFileRecursively(folderName,fileToDelete);
 				}
 
 				if (file.delete()) {
@@ -185,27 +181,11 @@ public class FileOperations {
 			System.out.println(currFileName + " deleted successfully");
 		} else {
 			System.out.println("Failed to delete " + currFileName);
+		}}catch(FileNotFoundException e){
+			throw new FileNotFoundException("Missing file-"+folderName+fileToDelete);
 		}
+			
 	}
-	
-	public static void deleteFile (String folderName,String fileToDelete, Scanner sc)throws FileNotFoundException {
-		// List the Files in the Directory displays files along with the Folder structure
-		
-			File deleteFile=new File(folderName + fileToDelete);
-			boolean exists = deleteFile.exists();
-			if(exists){
-				deleteFile.delete();
-				if (deleteFile.delete()) {
-				System.out.println("File deleted successfully-"+folderName+fileToDelete);
-				
-			}	else {
-				System.out.println("Failed to delete- " +folderName+fileToDelete);
-			}
-			}else {
-				throw new FileNotFoundException("Missing file-"+folderName+fileToDelete);
 
-		}
-
-	}
 }
 
