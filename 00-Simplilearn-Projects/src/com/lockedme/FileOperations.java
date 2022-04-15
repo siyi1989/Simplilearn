@@ -1,6 +1,7 @@
 package com.lockedme;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -55,15 +56,14 @@ public class FileOperations {
 		List<File> filesList = Arrays.asList(files);
 
 		Collections.sort(filesList);
-
+				
 		if (files != null && files.length > 0) {
 			for (File file : filesList) {
 
 				System.out.print(" ".repeat(indentationCount * 2));
 
 				if (file.isDirectory()) {
-					System.out.println("`-- " + file.getName());
-
+					System.out.println("`-- "+file.getName());					
 					//The Recursively indent and displaying all the files
 					fileListNames.add(file.getName());
 					listFilesInDirectory(file.getAbsolutePath(), indentationCount + 1, fileListNames);
@@ -110,7 +110,8 @@ public class FileOperations {
 		FileOperations.searchFileRecursively(path, fileName, fileListNames);
 
 		if (fileListNames.isEmpty()) {
-			System.out.println("\n\n***** Could not find any file with the given file name \"" + fileName + "\" *****\n\n");
+			System.out.println("\n\n***** Could not find any file with the given file name \"" + fileName + "\" *****\n"+
+		"Note: Filename is case sensitive.");
 		} else {
 			System.out.println("\n\nFound file at the below location(s):");
 
@@ -152,10 +153,12 @@ public class FileOperations {
 		List<String> filesListNames = FileOperations.listFilesInDirectory(path, 0, new ArrayList<String>());
 
 		System.out.println("Display all the files in Ascending Order\n");
+		
 		Collections.sort(filesListNames);
-
+		
 		filesListNames.stream().forEach(System.out::println);
 	}
+	
 	public static void deleteFileRecursively(String path) {
 
 		File currFile = new File(path);
@@ -184,4 +187,25 @@ public class FileOperations {
 			System.out.println("Failed to delete " + currFileName);
 		}
 	}
+	
+	public static void deleteFile (String folderName,String fileToDelete, Scanner sc)throws FileNotFoundException {
+		// List the Files in the Directory displays files along with the Folder structure
+		
+			File deleteFile=new File(folderName + fileToDelete);
+			boolean exists = deleteFile.exists();
+			if(exists){
+				deleteFile.delete();
+				if (deleteFile.delete()) {
+				System.out.println("File deleted successfully-"+folderName+fileToDelete);
+				
+			}	else {
+				System.out.println("Failed to delete- " +folderName+fileToDelete);
+			}
+			}else {
+				throw new FileNotFoundException("Missing file-"+folderName+fileToDelete);
+
+		}
+
+	}
 }
+

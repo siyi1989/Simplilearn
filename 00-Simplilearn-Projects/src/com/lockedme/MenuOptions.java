@@ -9,7 +9,7 @@ public class MenuOptions {
 		String appFunction = "You can use this application to :-\n"
 				+ "• Retrieve all file names in the user specified folder\n"
 				+ "• Search, add, or delete files in user specified folder.\n"
-				+ "\n**Please be careful to ensure the correct filename is provided for searching or deleting files.**\n";
+				+ "\n**Please input \\ at the end of folder path**\n";
 		System.out.println(companyDetails);
 
 		System.out.println(appFunction);
@@ -44,4 +44,11 @@ public class MenuOptions {
 		System.out.println(fileMenu);
 	}
 
+	public static void displayDeletionOptions() {
+		String deletionOptions = "\n\n* Select any option number from below and press Enter *\n\n"
+				+ "1) Delete file by entering filename\n" + "2) Delete file by entering index of file in folder\n"
+				 +"3) Show Previous Menu\n" + "4) Exit program\n";
+
+		System.out.println(deletionOptions);
+	}
 }

@@ -13,7 +13,8 @@ public class HandleFolderOptions extends FileOperations{
 			try {
 				MenuOptions.displayFolderMenu();
 					// user specified folder.
-					System.out.println("Enter a valid folder path:\n");
+					System.out.println("\nEnter a valid folder path:"+ 
+					"\nEg. D\\User\\Documents\\");
 					String folderName = getFolderName();
 					if(folderName.endsWith("\\")) {
 					File file = new File(folderName);
@@ -25,11 +26,11 @@ public class HandleFolderOptions extends FileOperations{
 						HandleFileOptions.handleWelcomeScreenInput(folderName);
 					}
 
-					} else {System.out.println("Filepath provided is invalid. Please try again");
+					} else {System.out.println("\nFilepath provided is invalid. Please try again");
 					handleFolderInput();
 					}
 						
-					}else {System.out.println("Filepath should end with \\. Please try again");
+					}else {System.out.println("\nFilepath should end with \\. Please try again");
 					handleFolderInput();
 						
 					}
@@ -63,12 +64,12 @@ public class HandleFolderOptions extends FileOperations{
 
 				case 3:
 					// Exit
-					System.out.println(" The program is been exited successfully.");
+					System.out.println("\nThe program is been exited successfully.");
 					running = false;
 					sc.close();
 					System.exit(0);
 				default:
-					System.out.println("Please select a valid option from above.");
+					System.out.println("\nPlease select a valid option from above.");
 				}
 			} catch (Exception e) {
 				System.out.println(e.getClass().getName());

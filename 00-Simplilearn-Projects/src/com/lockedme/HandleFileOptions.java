@@ -22,13 +22,13 @@ public class HandleFileOptions extends FileOperations{
 					HandleFileOptions.handleFileMenuOptions(folderName);
 					break;
 				case 3:
-					System.out.println(" The program is been exited successfully.");
+					System.out.println("\nThe program is been exited successfully.");
 					running = false;
 					sc.close();
 					System.exit(0);
 					break;
 				default:
-					System.out.println("Please select the appropriate  option from the above.");
+					System.out.println("\nPlease select the appropriate  option from the above.");
 				}
 			} catch (Exception e) {
 				System.out.println(e.getClass().getName());
@@ -48,20 +48,74 @@ public class HandleFileOptions extends FileOperations{
 				switch (input) {
 				case 1:
 					// file add to the main folder.
-					System.out.println("Enter the name of the file to be added to:\n"+folderName);
+					System.out.println("\nEnter the name of the file to be added to:\n"+folderName+
+							"\nEg.abc.txt\n");
 					String fileToAdd = sc.next();
 					
-					FileOperations.createFile(folderName,fileToAdd, sc);
+					if(!validateStringFilenameUsingRegex(fileToAdd)) {
+						FileOperations.createFile(folderName,fileToAdd, sc);
+					}else {
+						System.out.println("\nFilename provided contains invalid characters. Please try again.");
+						handleFileMenuOptions(folderName);
+					}
+					
 					
 					break;
 				case 2:
 					// File which is to be deleted from folder.
-					System.out.println("Enter the name of the file to be deleted from:\n"+folderName);
+					handleFileDeleteOptions(folderName);
+					
+
+					break;
+				case 3:
+					// File to be searched from folder.
+					System.out.println("\nEnter the name of the file to be searched from \n"+folderName+"\n");
+					String fileName = sc.next();
+					
+					FileOperations.displayFileLocations(fileName, folderName);
+
+					
+					break;
+				case 4:
+					// Go to Previous menu
+					return;
+				case 5:
+					// Exit
+					System.out.println("\nThe program is been exited successfully.\n");
+					running = false;
+					sc.close();
+					System.exit(0);
+				default:
+					System.out.println("\nPlease select a valid option from above.\n");
+				}
+			} catch (Exception e) {
+				System.out.println(e.getClass().getName());
+				handleFileMenuOptions(folderName);
+			}
+		} while (running == true);
+	}
+	
+	public static void handleFileDeleteOptions(String folderName) {
+		boolean running = true;
+		Scanner sc = new Scanner(System.in);
+		do {
+			try {
+				MenuOptions.displayDeletionOptions();
+				
+				int input = sc.nextInt();
+				switch (input) {
+				case 1:
+					// File delete by specifying filename
+					System.out.println("\nEnter the name of the file to be deleted from:\n"+folderName+
+							"\nEg.Abc.txt ****Note: Filename is case sensitive");
 					String fileToDelete = sc.next();
+					FileOperations.deleteFile(folderName,fileToDelete, sc);
 					
-					List<String> filesToDelete = FileOperations.displayFileLocations(fileToDelete, folderName);
+					break;
+				case 2:
+					// File delete by index	
 					
-					String deletionPrompt = "\nSelect index of which ever  file to delete?"
+					String deletionPrompt = "\nSelect index of file to delete from above list?"
 							+ "\n(Enter 0 if you want to delete all the elements)";
 					System.out.println(deletionPrompt);
 				
@@ -80,29 +134,20 @@ public class HandleFileOptions extends FileOperations{
 
 					break;
 				case 3:
-					// File to be searched from folder.
-					System.out.println("Enter the name of the file to be searched from \n"+folderName);
-					String fileName = sc.next();
-					
-					FileOperations.displayFileLocations(fileName, folderName);
-
-					
-					break;
-				case 4:
 					// Go to Previous menu
 					return;
-				case 5:
+				case 4:
 					// Exit
-					System.out.println(" The program is been exited successfully.");
+					System.out.println("\nThe program is been exited successfully.\n");
 					running = false;
 					sc.close();
 					System.exit(0);
 				default:
-					System.out.println("Please select a valid option from above.");
+					System.out.println("\nPlease select a valid option from above.\n");
 				}
 			} catch (Exception e) {
 				System.out.println(e.getClass().getName());
-				handleFileMenuOptions(folderName);
+				handleFileDeleteOptions(folderName);
 			}
 		} while (running == true);
 	}
