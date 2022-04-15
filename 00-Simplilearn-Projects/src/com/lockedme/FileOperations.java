@@ -1,6 +1,7 @@
 package com.lockedme;
 
 import java.io.File;
+
 import java.io.FileNotFoundException;
 import java.nio.file.InvalidPathException;
 import java.io.IOException;
@@ -14,6 +15,8 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class FileOperations {
 
@@ -22,12 +25,23 @@ public class FileOperations {
 	
 	//folder related
 
-	public static String getFolderName() {
-		Scanner sc1 = new Scanner(System.in);
-		String folderName = sc1.nextLine();	
-		return folderName;
-		}
+	//public static String getFolderName() {
+	//	Scanner sc1 = new Scanner(System.in);
+	//	String folderName = sc1.nextLine();
+	//	sc1 = new Scanner(System.in);
+	//	return folderName;
+	//	}
 	
+
+		public static String getFolderName() throws IOException{
+		InputStreamReader isr = new InputStreamReader(System.in);
+		BufferedReader br = new BufferedReader(isr);
+		
+		String folderName = br.readLine();
+		return folderName;
+		
+		}
+		
 	public static void createFolderIfNotPresent(String folderName) {
 		File folder = new File(folderName);
 		
@@ -73,32 +87,42 @@ public class FileOperations {
 		return fileListNames;
 	}
 
-	public static void createFile(String folderName,String fileToAdd, Scanner sc) throws InvalidPathException, IOException {
+	public static void createFile(String folderName,String fileToAdd,Scanner sc) throws InvalidPathException, IOException {
 		Path pathToFile = Paths.get(folderName + fileToAdd);
 		try {
+			
 			Files.createDirectories(pathToFile.getParent());
 			Files.createFile(pathToFile);
 			System.out.println(fileToAdd + " created successfully");
 
-			System.out.println("Would you like to add some content to the file? (Y/N)");
-			String choice = sc.next().toLowerCase();
-
-			sc.nextLine();
-			if (choice.equals("y")) {
-				System.out.println("\n\nInput content and press the enter\n");
-				String content = sc.nextLine();
-				Files.write(pathToFile, content.getBytes());
-				System.out.println("\nContent written to file " + fileToAdd);
-				System.out.println("The Content can be read by using Notepad or Notepad++");
-			}
-
+				writeFile(folderName,fileToAdd,sc);
 		} catch(InvalidPathException e){
 			throw new InvalidPathException(folderName+fileToAdd,"Invalid path provided");
 		}catch(IOException e) {
 			System.out.println(e.getClass().getName());
 	}}
 	
+	public static void writeFile(String folderName,String fileToAdd,Scanner sc) {
+		Path pathToFile = Paths.get(folderName + fileToAdd);
+				
+		System.out.println("Would you like to add some content to the file? (Y/N)");
+		sc.nextLine();
+		String choice = sc.nextLine().toLowerCase();
 
+		if (choice.equals("y")) {		
+		System.out.println("\n\nInput content and press the enter\n");		
+		try {			
+			InputStreamReader isr = new InputStreamReader(System.in);
+			BufferedReader br = new BufferedReader(isr);
+			String content = br.readLine();
+			Files.write(pathToFile, content.getBytes());
+			System.out.println("\nContent written to file " + pathToFile);
+			System.out.println("The Content can be read by using Notepad or Notepad++");
+		} catch (IOException e) {
+			System.out.println(e.getClass().getName());
+		}
+		}
+	}
 	public static List<String> displayFileLocations(String fileName, String path) {
 		List<String> fileListNames = new ArrayList<>();
 		FileOperations.searchFileRecursively(path, fileName, fileListNames);
