@@ -49,6 +49,37 @@
     <servlet-name>SearchController</servlet-name>
     <url-pattern>/SearchController</url-pattern>
   </servlet-mapping>
+    <servlet>
+    <description></description>
+    <display-name>AirportController</display-name>
+    <servlet-name>AirportController</servlet-name>
+    <servlet-class>com.controller.AirportController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AirportController</servlet-name>
+    <url-pattern>/AirportController</url-pattern>
+  </servlet-mapping>
+      <servlet>
+    <description></description>
+    <display-name>AirlineController</display-name>
+    <servlet-name>AirlineController</servlet-name>
+    <servlet-class>com.controller.AirlineController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AirlineController</servlet-name>
+    <url-pattern>/AirlineController</url-pattern>
+  </servlet-mapping>
+        <servlet>
+    <description></description>
+    <display-name>BookingController</display-name>
+    <servlet-name>BookingController</servlet-name>
+    <servlet-class>com.controller.BookingController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookingController</servlet-name>
+    <url-pattern>/BookingController</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>ProductService</display-name>
@@ -68,5 +99,45 @@
   <servlet-mapping>
     <servlet-name>LoginService</servlet-name>
     <url-pattern>/LoginService</url-pattern>
+  </servlet-mapping>
+      <servlet>
+    <description></description>
+    <display-name>AirlineService</display-name>
+    <servlet-name>AirlineService</servlet-name>
+    <servlet-class>com.service.AirlineService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AirlineService</servlet-name>
+    <url-pattern>/AirlineService</url-pattern>
+  </servlet-mapping>
+        <servlet>
+    <description></description>
+    <display-name>AirportService</display-name>
+    <servlet-name>AirportService</servlet-name>
+    <servlet-class>com.service.AirportService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AirportService</servlet-name>
+    <url-pattern>/AirportService</url-pattern>
+  </servlet-mapping>
+          <servlet>
+    <description></description>
+    <display-name>CountriesService</display-name>
+    <servlet-name>CountriesService</servlet-name>
+    <servlet-class>com.service.CountriesService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CountriesService</servlet-name>
+    <url-pattern>/CountriesService</url-pattern>
+  </servlet-mapping>
+            <servlet>
+    <description></description>
+    <display-name>BookingService</display-name>
+    <servlet-name>BookingService</servlet-name>
+    <servlet-class>com.service.BookingService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookingService</servlet-name>
+    <url-pattern>/BookingService</url-pattern>
   </servlet-mapping>
 </web-app>

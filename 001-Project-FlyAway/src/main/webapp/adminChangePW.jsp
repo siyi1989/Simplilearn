@@ -10,14 +10,14 @@
 <h2>Change Admin Password Page</h2>
 
 <%
-String admin=(String)session.getAttribute("admin");
+String admin=(String)session.getAttribute("Admin");
 if(admin==null){
 	response.sendRedirect("index.jsp");
 }
 %>
 
 <form action="AdminController" method="post"> 
-	<input type="hidden" name="email" value="<%= session.getAttribute("admin") %>" />
+	<input type="hidden" name="email" value="<%= session.getAttribute("Admin") %>" />
 	<label>Old Password</label>
 	<input type="password" name="password"/>
 	<br/>

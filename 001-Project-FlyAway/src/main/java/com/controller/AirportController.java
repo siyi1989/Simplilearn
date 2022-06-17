@@ -52,10 +52,20 @@ public class AirportController extends HttpServlet {
 		
 		HttpSession hs=request.getSession();
 		List<Airports>listOfAirport=ports.getAllAirport();
+		String inputcountry = request.getParameter("country");;
+		List<Airports>listOfSelectedAirports=ports.getSelectedAirport(inputcountry);
+		
 		hs.setAttribute("airports", listOfAirport); 
+		hs.setAttribute("SelectedAirports", listOfSelectedAirports);
 		//response.sendRedirect("displayProduct.jsp");	
-		RequestDispatcher rd1=request.getRequestDispatcher("storeAirports.jsp");
+		RequestDispatcher rd1=request.getRequestDispatcher("storeProduct.jsp"); //using dropdown
 		rd1.include(request, response);
+		RequestDispatcher rd2=request.getRequestDispatcher("searchProduct.jsp"); //using dropdown
+		rd2.include(request, response);
+		RequestDispatcher rd3=request.getRequestDispatcher("storeAirport.jsp");
+		rd3.include(request, response);
+		
+		
 		
 
 		
@@ -84,7 +94,7 @@ public class AirportController extends HttpServlet {
 		String result=ports.storeAirport(a1);
 		
 		pw.print(result);
-		RequestDispatcher rd1=request.getRequestDispatcher("storeAirlines.jsp");
+		RequestDispatcher rd1=request.getRequestDispatcher("storeAirport.jsp");
 		rd1.include(request, response);
 		doGet(request,response);
 

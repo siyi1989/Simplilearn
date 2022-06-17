@@ -48,6 +48,9 @@ public class AdminController extends HttpServlet {
 		response.setContentType("text/html");
 		
 		//receive value from view jsp file
+		HttpSession hs=request.getSession();
+		
+		
 		String email=request.getParameter("email");
 		String password=request.getParameter("password");
 		String newpassword1=request.getParameter("newpassword1");

@@ -73,4 +73,27 @@ public class AirportDao {
 		return listOfAirport;
 	}
 	
+	public List<Airports> getSelectedAirportDetails(String inputcountry) {
+		List<Airports> listOfSelectedAirport=new ArrayList<Airports>();
+		try {
+			Connection con=DbResource.getDbConnection();
+			PreparedStatement pstmt=con.prepareStatement("Select airport from airports where acountry=?");
+			
+			pstmt.setString(1,inputcountry);
+			
+			ResultSet rs=pstmt.executeQuery();
+			while(rs.next()) {
+
+				Airports port=new Airports();
+				port.setAirport(rs.getString(1));
+				listOfSelectedAirport.add(port);
+				
+			}
+		}catch (Exception e) {
+			System.out.println(e);
+		
+		}
+		return listOfSelectedAirport;
+	}
+	
 }

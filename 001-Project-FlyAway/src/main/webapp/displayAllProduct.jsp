@@ -22,6 +22,7 @@
 		<th>To airport</th>
 		<th>Airline</th>
 		<th>Price per pax</th>
+		<th>Slot available</th>
 				
 	</tr>
 		
@@ -35,7 +36,6 @@ Object obj=session.getAttribute("products");
 			Product p=li.next();
 			
 			%>
-			<form action="SearchController" method="post"> 
 			<tr id=<%=p.getFid()%>>
 				<td><%=p.getFdate() %></td>
 				<td><%=p.getFsource() %></td>
@@ -44,33 +44,24 @@ Object obj=session.getAttribute("products");
 				<td><%=p.getFdestport() %></td>
 				<td><%=p.getFairline() %></td>
 				<td><%=p.getFprice() %></td>
-				<td><%if(p.getFslot()<10)
-				{%>out.println(p.getFslot()+" number of seats left");<%}%></td>
+				<td><%=p.getFslot()%></td>
 				
-	<td><input type="hidden" name="flightName" id="flightID" /></td>
-	<td><input type="Submit" value="Book" onclick="show()"/></td>
-	
 
 			</tr>
-		</table>
-		</form>	
+
 		<%
 		}
 	}
 	
 	%>
 	
-
-
-        <script>
-            function show() {
-                var rowId = event.target.parentNode.parentNode.id;
-                //alert(rowId);
-               document.getElementById("flightID").value=rowId;
-               document.form[0].submit();
-            }
-            
-        </script>  
-
+		</table>
+		
+<br/>
+<a href="index.jsp">Logout</a>
+<br/>
+<a href="adminHome.jsp">Return to Admin HomePage</a>
 </body>
+
+
 </html>

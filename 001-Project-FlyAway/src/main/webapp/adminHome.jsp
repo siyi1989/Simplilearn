@@ -8,7 +8,7 @@
 </head>
 <body>
 <%
-String admin=(String)session.getAttribute("admin");
+String admin=(String)session.getAttribute("Admin");
 if(admin==null){
 	response.sendRedirect("index.jsp");
 }else{

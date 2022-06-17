@@ -32,7 +32,7 @@
 		
 
 <%
-Object obj=session.getAttribute("airlines");
+Object obj=session.getAttribute("airline");
 	if(obj!=null){
 		List<Airlines> listOfAirline=(List<Airlines>)obj;
 		Iterator<Airlines> li=listOfAirline.iterator();

@@ -44,8 +44,7 @@ public class AirlineController extends HttpServlet {
 		
 		HttpSession hs=request.getSession();
 		List<Airlines>listOfAirline=airs.getAllAirline();
-		hs.setAttribute("products", listOfAirline); 
-		//response.sendRedirect("displayProduct.jsp");	
+		hs.setAttribute("airline", listOfAirline); 	
 		RequestDispatcher rd1=request.getRequestDispatcher("storeAirlines.jsp");
 		rd1.include(request, response);
 		
@@ -61,14 +60,13 @@ public class AirlineController extends HttpServlet {
 
 		String airlinename=request.getParameter("airlinename");
 		
-		Airlines lairl=new Airlines();
-		lairl.setLairline(airlinename);
+		Airlines air=new Airlines();
+		air.setLairline(airlinename);
 		
-		String result=airs.storeAirline(lairl);
+		String result=airs.storeAirline(air);
 		pw.print(result);
 		RequestDispatcher rd1=request.getRequestDispatcher("storeAirlines.jsp");
 		rd1.include(request, response);
-		doGet(request,response);
 		
 	}
 

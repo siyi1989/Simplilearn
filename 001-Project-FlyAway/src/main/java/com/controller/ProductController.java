@@ -44,35 +44,13 @@ public class ProductController extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		PrintWriter pw=response.getWriter();
-		response.setContentType("text/html");
+		response.setContentType("text/html");	
 		
-		
-		//receive value from view jsp file
-		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-		
-			Date tripStart = null;
-			try {
-				tripStart = (Date) formatter.parse(request.getParameter("tripStart"));
-			} catch (ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
-		
-			Date tripEnd = null;
-			try {
-				tripEnd = (Date) formatter.parse(request.getParameter("tripEnd"));
-			} catch (ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
-		
-		Product product=new Product();
-		
-		List<Product> listOfProduct=ps.getAllProduct(product,tripStart,tripEnd);
-		RequestDispatcher rd1=request.getRequestDispatcher("displayProduct.jsp");
+		HttpSession hs=request.getSession();
+		List<Product>listOfProduct=ps.getAllProductDetails();
+		hs.setAttribute("products", listOfProduct); 
+		//response.sendRedirect("displayProduct.jsp");	
+		RequestDispatcher rd1=request.getRequestDispatcher("displayAllProduct.jsp");
 		rd1.include(request, response);
 		
 	}
@@ -116,7 +94,7 @@ public class ProductController extends HttpServlet {
 		product.setFslot(fslot);
 		
 		String result=ps.storeProduct(product);
-		pw.print(result);
+		pw.println(result);
 		RequestDispatcher rd1=request.getRequestDispatcher("storeProduct.jsp");
 		rd1.include(request, response);
 		doGet(request,response);

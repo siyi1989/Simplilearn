@@ -1,6 +1,10 @@
 <%@page import="java.util.Iterator"%>
 <%@page import="com.bean.Product"%>
 <%@page import="java.util.List"%>
+<%@page import="com.bean.Countries"%>
+<%@page import="com.service.CountriesService"%>
+<%@page import="com.dao.CountriesDao"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -21,12 +25,28 @@ if(user==null){
 
 			
 <h2>Search Page</h2>
-<form action="SearchController" method="get"> 
+<form action="SearchController" method="get" name="form1"> 
 	<input type="hidden" name="email" value="<%=session.getAttribute("User") %>" />
-	<label>Fly From&nbsp;</label>
-	<input type="dropdown" name="fsource";/>
-	<label>To</label>
-	<input type="dropdown" name="fdestination";><br/>
+	<%
+Object obj=session.getAttribute("countries");
+	if(obj!=null){
+		List<Countries> listOfCountry=(List<Countries>)obj;
+		Iterator<Countries> li=listOfCountry.iterator();
+		while (li.hasNext()){
+			Countries ctry=li.next();
+			
+			%>
+			
+				<label>Fly From</label>
+				<option name="fsource" id="fsource" value=<%=ctry.getCcountry()%>><%=ctry.getCcountry() %></option> 
+				<label>Fly To</label>
+				<option name="fdestination" id="fdestination" value=<%=ctry.getCcountry()%>><%=ctry.getCcountry() %></option> 
+			
+		<%
+		}
+	}
+	
+	%>
 	<br/>
 	<label>Search within date range</label><br/>
 	<label>Date From</label>
@@ -47,12 +67,13 @@ if(user==null){
 		<option value = "9" selected>9</option>
 		<option value = "10" selected>10</option>
 		</select>
+	<br/>
 	<label>Please contact customer service for booking for more than 10 pax.</label>
 	
 	
 	<br/>
 	
-	<input type="submit" value="Signin"/>
+	<input type="submit" value="Search"/>
 	<input type="reset" value="reset"/>	
 
 
@@ -84,6 +105,22 @@ $( function() {
     });  
    
 });
+
+
+
+document.form1.addEventListener( "submit", function(event) {
+
+    var fsource = this.querySelector("input[name=fsource]").value; // this = object of form1
+    var fdest = this.querySelector("input[name=fdest]").value;
+
+    if ( fsource.equals(fdest) ) {
+        alert("Fly To cannot be the same as Fly From");
+        event.preventDefault();
+    } else {
+        alert("submit");
+    }
+
+} );
 </script>
 
 	

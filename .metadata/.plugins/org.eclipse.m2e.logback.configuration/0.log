@@ -2606,3 +2606,72 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Duplicated 
 2022-06-12 22:57:38,897 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2022-06-15 22:20:20,977 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2022-06-15 22:51:00,904 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-06-16 00:14:24,821 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-06-16 06:18:07,881 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-06-16 12:08:20,141 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-06-16 20:52:59,542 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-06-16 21:13:23,113 [Worker-32: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-16 21:13:23,115 [Worker-32: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\main\resources
+2022-06-16 21:13:23,117 [Worker-32: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-16 21:13:23,117 [Worker-32: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\test\resources
+2022-06-16 21:37:21,194 [Worker-40: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-16 21:37:21,194 [Worker-40: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\main\resources
+2022-06-16 21:37:21,196 [Worker-40: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-16 21:37:21,196 [Worker-40: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\test\resources
+2022-06-16 21:49:44,078 [Worker-52: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-16 21:49:44,079 [Worker-52: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\main\resources
+2022-06-16 21:49:44,081 [Worker-52: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-16 21:49:44,081 [Worker-52: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\test\resources
+2022-06-16 23:34:17,675 [Worker-47: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-16 23:34:17,676 [Worker-47: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\main\resources
+2022-06-16 23:34:17,678 [Worker-47: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-16 23:34:17,678 [Worker-47: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\test\resources
+2022-06-16 23:36:45,116 [Worker-71: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-16 23:36:45,117 [Worker-71: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\main\resources
+2022-06-16 23:36:45,119 [Worker-71: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-16 23:36:45,120 [Worker-71: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\test\resources
+2022-06-16 23:48:54,257 [Worker-75: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-16 23:48:54,258 [Worker-75: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\main\resources
+2022-06-16 23:48:54,259 [Worker-75: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-16 23:48:54,259 [Worker-75: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\test\resources
+2022-06-16 23:51:39,811 [Worker-67: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-16 23:51:39,812 [Worker-67: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\main\resources
+2022-06-16 23:51:39,813 [Worker-67: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-16 23:51:39,813 [Worker-67: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\test\resources
+2022-06-16 23:54:54,631 [Worker-75: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-16 23:54:54,631 [Worker-75: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\main\resources
+2022-06-16 23:54:54,633 [Worker-75: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-16 23:54:54,633 [Worker-75: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\test\resources
+2022-06-17 00:00:18,654 [Worker-67: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-17 00:00:18,655 [Worker-67: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\main\resources
+2022-06-17 00:00:18,656 [Worker-67: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-17 00:00:18,656 [Worker-67: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\test\resources
+2022-06-17 00:14:37,396 [Worker-47: Build Project] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-06-17 00:14:37,397 [Worker-47: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\MVC_Using_Hibernate\src\main\resources
+2022-06-17 00:14:37,398 [Worker-47: Build Project] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-06-17 00:14:37,399 [Worker-47: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\MVC_Using_Hibernate\src\test\resources
+2022-06-17 00:14:37,405 [Worker-47: Build Project] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of MVC_Using_Hibernate
+2022-06-17 00:14:37,406 [Worker-47: Build Project] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for MVC_Using_Hibernate
+2022-06-17 00:14:38,419 [Worker-47: Build Project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-clean-plugin:jar:2.5 is missing, no dependency information available
+2022-06-17 00:14:38,737 [Worker-47: Build Project] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-06-17 00:25:07,403 [Worker-82: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-17 00:25:07,404 [Worker-82: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\main\resources
+2022-06-17 00:25:07,406 [Worker-82: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-17 00:25:07,407 [Worker-82: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\test\resources
+2022-06-17 00:28:12,153 [Worker-82: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-17 00:28:12,153 [Worker-82: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\main\resources
+2022-06-17 00:28:12,154 [Worker-82: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-17 00:28:12,155 [Worker-82: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\test\resources
+2022-06-17 00:34:55,535 [Worker-69: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-17 00:34:55,535 [Worker-69: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\main\resources
+2022-06-17 00:34:55,537 [Worker-69: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-17 00:34:55,537 [Worker-69: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\test\resources
+2022-06-17 11:54:53,191 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-06-17 12:05:40,571 [Worker-24: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-17 12:05:40,577 [Worker-24: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\main\resources
+2022-06-17 12:05:40,582 [Worker-24: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-17 12:05:40,583 [Worker-24: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\test\resources
+2022-06-17 12:44:40,126 [Worker-34: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-17 12:44:40,127 [Worker-34: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\main\resources
+2022-06-17 12:44:40,131 [Worker-34: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-17 12:44:40,131 [Worker-34: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\test\resources

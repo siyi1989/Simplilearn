@@ -16,7 +16,7 @@
 
 
 <%
-Object obj=session.getAttribute("listOfAirlines");
+Object obj=session.getAttribute("Airlines");
 if(obj!=null){
 	 List<Airlines> listOfAir = (List<Airlines>)obj;
 	Iterator<Airlines> li=listOfAir.listIterator();
@@ -37,15 +37,15 @@ if(obj!=null){
 
 
 <%
-Object obj1=session.getAttribute("listOfAirports");
+Object obj1=session.getAttribute("Airports");
 if(obj!=null){
-	 List<Airports> listOfAirport = (List<Airports>)obj;
+	 List<Airports> listOfAirport = (List<Airports>)obj1;
 	Iterator<Airports> lip=listOfAirport.listIterator();
 	while(lip.hasNext()){
 	Airports airport=lip.next();
 	%>
 	<label>From Country</label>
-	<option name="fsource" value=<%=airport.getAcountry()%>><%=airport.getAcountry() %></option> 
+	<option name="fsource" id="acountry" value=<%=airport.getAcountry()%>><%=airport.getAcountry() %></option> 
 	<option name="fsourceport" value=<%=airport.getAirport()%>><%=airport.getAirport() %></option> <br/>
 	
 	<label>To Country</label>

@@ -31,5 +31,15 @@ public class AirportService {
 		return listOfAirport;
 	}
 	
+	public List<Airports> getSelectedAirport(String inputcountry){
+		List<Airports>listOfSelectedAirport=portd.getSelectedAirportDetails(inputcountry);
+		Iterator<Airports> li=listOfSelectedAirport.iterator();
+		while(li.hasNext()) {
+			Airports port=li.next();
+		}
+		
+		return listOfSelectedAirport;
+	}
+	
 	
 }

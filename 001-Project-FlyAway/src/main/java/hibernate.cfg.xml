@@ -12,5 +12,7 @@
   <mapping class="com.bean.Product"/>
   <mapping class="com.bean.Airports"/>
   <mapping class="com.bean.Countries"/>
+  <mapping class="com.bean.Airlines"/>
+  <mapping class="com.bean.Booking"/>
  </session-factory>
 </hibernate-configuration>
