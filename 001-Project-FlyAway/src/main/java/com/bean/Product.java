@@ -19,9 +19,6 @@ public class Product {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int fid;
 	private Date fdate;
-	@ManyToOne(cascade=CascadeType.ALL) //through main object, user can save/update/delete another table
-	@JoinColumn(name="fsourceport",referencedColumnName="airport")
-	@JoinColumn(name="fdestport",referencedColumnName="airport")
 	private String fsourceport;
 	private String fdestport;
 	private String fairline;

@@ -15,10 +15,10 @@
 <body>
 <form action="AirportController" method="post">
 <label>New Airport Name</label>
-<input type="text" name="airport"/><br/>
+<input type="text" name="airport" required/><br/>
 <label>Country</label>
-<input type="text" name="country"/><br/>
-<input type="submit" value="Store Airport"/>
+<input type="text" name="country" required/><br/>
+<input type="submit" value="Store Airport" required/>
 <input type="reset" value="reset"/>
 </form>
 
@@ -44,7 +44,7 @@ Object obj=session.getAttribute("airports");
 			%>
 		<tr>
 			<td><%=ports.getAirport() %></td>
-			<td><%=ports.getAcountry()%></td>
+			<td><%=ports.getccountry()%></td>
 
 			</tr>
 			

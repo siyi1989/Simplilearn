@@ -1,6 +1,7 @@
 <%@page import="java.util.Iterator"%>
 <%@page import="com.bean.Airlines"%>
 <%@page import="com.bean.Airports"%>
+<%@page import="com.bean.Countries"%>
 <%@page import="java.util.List"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -15,8 +16,10 @@
 <form action="ProductController" method="post">
 
 
+
 <%
-Object obj=session.getAttribute("Airlines");
+Object obj=session.getAttribute("airlines");
+
 if(obj!=null){
 	 List<Airlines> listOfAir = (List<Airlines>)obj;
 	Iterator<Airlines> li=listOfAir.listIterator();
@@ -29,33 +32,56 @@ if(obj!=null){
 <%
 
 	}
+}else{
+	out.println(session.getAttribute("airlines"));
 }
 %>
 <a href="storeAirlines.jsp">Add new airline</a>
 
 
 
-
 <%
-Object obj1=session.getAttribute("Airports");
-if(obj!=null){
-	 List<Airports> listOfAirport = (List<Airports>)obj1;
-	Iterator<Airports> lip=listOfAirport.listIterator();
-	while(lip.hasNext()){
-	Airports airport=lip.next();
+Object obj1=session.getAttribute("countries");
+if(obj1!=null){
+	 List<Countries> listOfCountry = (List<Countries>)obj1;
+	Iterator<Countries> li1=listOfCountry.listIterator();
+	while(li1.hasNext()){
+	Countries country=li1.next();
 	%>
 	<label>From Country</label>
-	<option name="fsource" id="acountry" value=<%=airport.getAcountry()%>><%=airport.getAcountry() %></option> 
+	<option name="fsource" id="country" value=<%=country.getCcountry()%>><%=country.getCcountry() %></option> 
+	
+	<label>To Country</label>
+	<option name="fdestination" value=<%=country.getCcountry()%>><%=country.getCcountry() %></option> 
+	 
+<%
+
+	}}else{
+		out.println(session.getAttribute("countries"));
+	}
+%>
+
+<a href="storeCountries.jsp">Add new country</a>
+
+<%
+Object obj2=session.getAttribute("airports");
+if(obj2!=null){
+	 List<Airports> listOfAirport = (List<Airports>)obj2;
+	Iterator<Airports> li2=listOfAirport.listIterator();
+	while(li2.hasNext()){
+	Airports airport=li2.next();
+	%>
+	<label>From Country</label>
 	<option name="fsourceport" value=<%=airport.getAirport()%>><%=airport.getAirport() %></option> <br/>
 	
 	<label>To Country</label>
-	<option name="fdestination" value=<%=airport.getAcountry()%>><%=airport.getAcountry() %></option> 
 	<option name="fdestport" value=<%=airport.getAirport()%>><%=airport.getAirport() %></option>
 	 
 <%
 
+	}}else{
+		out.println(session.getAttribute("airports"));
 	}
-}
 %>
 
 <a href="storeAirports.jsp">Add new airport</a>

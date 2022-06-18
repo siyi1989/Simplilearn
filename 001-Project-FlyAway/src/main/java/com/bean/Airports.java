@@ -12,9 +12,7 @@ public class Airports {
 
 	@Id
 	private String airport;
-	@ManyToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="acountry",referencedColumnName="ccountry")
-	private String acountry;
+	private String ccountry;
 
 	public String getAirport() {
 		return airport;
@@ -22,20 +20,20 @@ public class Airports {
 	public void setAirport(String airport) {
 		this.airport = airport;
 	}
-	public String getAcountry() {
-		return acountry;
+	public String getccountry() {
+		return ccountry;
 	}
-	public void setAcountry(String acountry) {
-		this.acountry = acountry;
+	public void setccountry(String ccountry) {
+		this.ccountry = ccountry;
 	}
 	@Override
 	public String toString() {
-		return "Airports [airport=" + airport + ", acountry=" + acountry + "]";
+		return "Airports [airport=" + airport + ", ccountry=" + ccountry + "]";
 	}
-	public Airports(String airport, String acountry) {
+	public Airports(String airport, String ccountry) {
 		super();
 		this.airport = airport;
-		this.acountry = acountry;
+		this.ccountry = ccountry;
 	}
 	public Airports() {
 		super();

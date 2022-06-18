@@ -13,10 +13,10 @@ public class AirportService {
 	
 	public String storeAirport(Airports airport) {
 		if(portd.storeAirport(airport)>0) {
-			return "Airport stored successfully";
+			return "Airport save success";
 			
 		}else {
-			return "Airport cannot be saved. Please ensure that it is not already in list.";
+			return "Airport save fail";
 		}
 
 	}

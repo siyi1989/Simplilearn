@@ -79,6 +79,17 @@
     <servlet-name>BookingController</servlet-name>
     <url-pattern>/BookingController</url-pattern>
   </servlet-mapping>
+          <servlet>
+    <description></description>
+    <display-name>CountriesController</display-name>
+    <servlet-name>CountriesController</servlet-name>
+    <servlet-class>com.controller.CountriesController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CountriesController</servlet-name>
+    <url-pattern>/CountriesController</url-pattern>
+  </servlet-mapping>
+  
   
   <servlet>
     <description></description>

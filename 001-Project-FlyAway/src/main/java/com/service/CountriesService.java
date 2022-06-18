@@ -5,7 +5,6 @@ import java.util.Iterator;
 import java.util.List;
 
 import com.bean.Countries;
-import com.bean.Product;
 import com.dao.CountriesDao;
 
 public class CountriesService {
@@ -16,10 +15,20 @@ public class CountriesService {
 		List<Countries>listOfCountry=cd.getAllCountries();
 		Iterator<Countries> li=listOfCountry.iterator();
 		while(li.hasNext()) {
-			 Countries ctry=li.next();
+			 Countries country=li.next();
 		}
 		
 		return listOfCountry;
+	}
+	
+	public String storeCountries(Countries country) {
+		if(cd.storeCountries(country)>0) {
+			return "Country save success";
+			
+		}else {
+			return "Country save fail.Check no duplicates";
+		}
+
 	}
 	
 }

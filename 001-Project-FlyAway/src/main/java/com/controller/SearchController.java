@@ -97,54 +97,7 @@ public class SearchController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-		response.setContentType("text/html");
-		PrintWriter pw=response.getWriter();
 
-		HttpSession hs=request.getSession();
-		
-//			
-//		pw.println("row"+searchid);
-//		RequestDispatcher rd1=request.getRequestDispatcher("userHome.jsp");
-//		rd1.include(request,response);
-//		
-//		response.setContentType("text/html");		
-//		PrintWriter pw=response.getWriter();
-//			
-//		
-//		float fprice=Float.parseFloat(request.getParameter("fprice"));
-//		int fslot=Integer.parseInt(request.getParameter("fslot"));
-//		String fsource=request.getParameter("fsource");
-//		String fsourceport=request.getParameter("fsourceport");
-//		String fdestination=request.getParameter("fdestination");
-//		String fdestport=request.getParameter("fdestport");
-//		
-//		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-//		Date fdate = null;
-//		try {
-//		 fdate = (Date)formatter.parse(request.getParameter("fdate"));
-//		} catch (ParseException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		
-//		Product product=new Product();
-//		product.setFairline(fairline);
-//		product.setFprice(fprice);
-//		product.setFsource(fsource);
-//		product.setFsourceport(fsourceport);
-//		product.setFdestination(fdestination);
-//		product.setFdestport(fdestport);
-//		product.setFdate(fdate);
-//		product.setFslot(fslot);
-//		
-//		String result=ps.getAllProduct(product);
-//		pw.print(result);
-//		RequestDispatcher rd1=request.getRequestDispatcher("checkProduct.jsp");
-//		rd1.include(request, response);
-//		doGet(request,response);
-//		
-//	}
-//	}
 
 }
 }

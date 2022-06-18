@@ -1,7 +1,7 @@
 <%@page import="java.util.Iterator"%>
-<%@page import="com.bean.Airlines"%>
-<%@page import="com.service.AirlineService"%>
-<%@page import="com.dao.AirlineDao"%>
+<%@page import="com.bean.Countries"%>
+<%@page import="com.service.CountriesService"%>
+<%@page import="com.dao.CountriesDao"%>
 <%@page import="java.util.List"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -13,35 +13,35 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="AirlineController" method="post">
-<label>New Airline Name</label>
-<input type="text" name="airline" required/><br/>
-<input type="submit" value="Store Airline"/>
+<form action="CountriesController" method="post">
+<label>New Country</label>
+<input type="text" name="country" required/><br/>
+<input type="submit" value="Store Country"/>
 <input type="reset" value="reset"/>
 </form>
 
 <br/>
 <br/>
 
-<table border="1" name="List of Airlines">
+<table border="1" name="List of Countries">
 	<tr>
-		<th>Airlines</th>
+		<th>Countries</th>
 		
 		
 	</tr>
 		
 
 <%
-Object obj=session.getAttribute("airline");
+Object obj=session.getAttribute("countries");
 	if(obj!=null){
-		List<Airlines> listOfAirline=(List<Airlines>)obj;
-		Iterator<Airlines> li=listOfAirline.iterator();
+		List<Countries> listOfCountry=(List<Countries>)obj;
+		Iterator<Countries> li=listOfCountry.iterator();
 		while (li.hasNext()){
-			Airlines air=li.next();
+			Countries ctry=li.next();
 			
 			%>
 		<tr>
-			<td><%=air.getLairline() %></td>
+			<td><%=ctry.getCcountry() %></td>
 	
 
 			</tr>

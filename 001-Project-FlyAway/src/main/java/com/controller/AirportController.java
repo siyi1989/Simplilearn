@@ -19,9 +19,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import com.bean.Airlines;
 import com.bean.Airports;
-import com.bean.Countries;
 import com.service.AirportService;
 
 /**
@@ -62,7 +60,7 @@ public class AirportController extends HttpServlet {
 		rd1.include(request, response);
 		RequestDispatcher rd2=request.getRequestDispatcher("searchProduct.jsp"); //using dropdown
 		rd2.include(request, response);
-		RequestDispatcher rd3=request.getRequestDispatcher("storeAirport.jsp");
+		RequestDispatcher rd3=request.getRequestDispatcher("storeAirports.jsp");
 		rd3.include(request, response);
 		
 		
@@ -80,23 +78,25 @@ public class AirportController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
+		
 		response.setContentType("text/html");		
 		PrintWriter pw=response.getWriter();
-
 
 		String airport=request.getParameter("airport");
 		String country=request.getParameter("country");
 		
+
+		Airports port=new Airports();
+		port.setAirport(airport);
+		port.setccountry(country);
 		
-		//Store records
-		Airports a1=new Airports(airport,country);
-	    AirportService ports=new AirportService();
-		String result=ports.storeAirport(a1);
 		
-		pw.print(result);
-		RequestDispatcher rd1=request.getRequestDispatcher("storeAirport.jsp");
-		rd1.include(request, response);
-		doGet(request,response);
+		String result=ports.storeAirport(port);
+		
+		RequestDispatcher rd1=request.getRequestDispatcher("storeProduct.jsp");
+		rd1.forward(request, response);
+		
+	
 
 	}
 	

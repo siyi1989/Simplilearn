@@ -27,9 +27,9 @@ public class CountriesDao {
 			ResultSet rs=pstmt.executeQuery();
 			while(rs.next()) {
 
-				Countries ctry=new Countries();
-				ctry.setCcountry(rs.getString(1));
-				listOfCountries.add(ctry);
+				Countries country=new Countries();
+				country.setCcountry(rs.getString(1));
+				listOfCountries.add(country);
 				
 				}
 			}catch (Exception e) {
@@ -39,4 +39,19 @@ public class CountriesDao {
 			return listOfCountries;
 		}
 		
+	public int storeCountries(Countries country) {
+		try {
+			Connection con=DbResource.getDbConnection();
+			PreparedStatement pstmt=con.prepareStatement("Insert into countries(ccountry) values (?)");
+			pstmt.setString(1,country.getCcountry());
+			
+			int res=pstmt.executeUpdate();
+			return res;
+		}catch (Exception e) {
+			System.out.println(e);
+			return 0;
+				
+				
+		}
+		}
 	}
