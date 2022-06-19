@@ -43,15 +43,15 @@ public class ProductController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		
+		PrintWriter pw=response.getWriter();
 		response.setContentType("text/html");	
 		
 		HttpSession hs=request.getSession();
 		List<Product>listOfProduct=ps.getAllProductDetails();
 		hs.setAttribute("products", listOfProduct); 
-		//response.sendRedirect("displayProduct.jsp");	
-		RequestDispatcher rd1=request.getRequestDispatcher("displayAllProduct.jsp");
-		rd1.include(request, response);
+		response.sendRedirect("displayAllProduct.jsp");	
+		//RequestDispatcher rd1=request.getRequestDispatcher("displayAllProduct.jsp");
+		//rd1.include(request, response);
 		
 	}
 	/**

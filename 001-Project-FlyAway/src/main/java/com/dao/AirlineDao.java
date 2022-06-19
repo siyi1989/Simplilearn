@@ -42,9 +42,9 @@ public class AirlineDao {
 			ResultSet rs=pstmt.executeQuery();
 			while(rs.next()) {
 
-				Airlines air=new Airlines();
-				air.setLairline(rs.getString(1));
-				listOfAirline.add(air);
+				Airlines airline=new Airlines();
+				airline.setLairline(rs.getString(1));
+				listOfAirline.add(airline);
 				
 				}
 			}catch (Exception e) {

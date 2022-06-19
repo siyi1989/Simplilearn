@@ -16,7 +16,7 @@ public class AirlineService {
 		List<Airlines>listOfAirline=ad.getAllAirlineDetails();
 		Iterator<Airlines> li=listOfAirline.iterator();
 		while(li.hasNext()) {
-			 Airlines air=li.next();
+			 Airlines airline=li.next();
 		}
 		
 		return listOfAirline;

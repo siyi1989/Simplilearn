@@ -15,8 +15,7 @@
 <body>
 <form action="ProductController" method="post">
 
-
-
+<select name="flight">
 <%
 Object obj=session.getAttribute("airlines");
 
@@ -27,7 +26,7 @@ if(obj!=null){
 	Airlines air=li.next();
 	%>
 	<label>Flight</label>
-	<option name="flight" value=<%=air.getLairline()%>><%=air.getLairline() %></option> 
+	<option value=<%=air.getLairline()%>><%=air.getLairline() %></option> 
 	 
 <%
 
@@ -36,6 +35,7 @@ if(obj!=null){
 	out.println(session.getAttribute("airlines"));
 }
 %>
+</select>
 <a href="storeAirlines.jsp">Add new airline</a>
 
 

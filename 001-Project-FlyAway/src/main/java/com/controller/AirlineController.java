@@ -34,21 +34,23 @@ public class AirlineController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
     
-    AirlineService airs=new AirlineService();
+
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		response.setContentType("text/html");	
+		response.setContentType("text/html");		
+		PrintWriter pw=response.getWriter();
 		
 		HttpSession hs=request.getSession();
+	    AirlineService airs=new AirlineService();
 		List<Airlines>listOfAirline=airs.getAllAirline();
 		hs.setAttribute("airlines", listOfAirline); 	
+		response.sendRedirect("storeProduct.jsp");
 		RequestDispatcher rd1=request.getRequestDispatcher("storeAirlines.jsp");
 		rd1.include(request, response);
-		RequestDispatcher rd2=request.getRequestDispatcher("storeProduct.jsp");
-		rd2.include(request, response);
+		
 	}
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -63,11 +65,11 @@ public class AirlineController extends HttpServlet {
 		
 		Airlines air=new Airlines();
 		air.setLairline(airlinename);
-		
+	    AirlineService airs=new AirlineService();
 		String result=airs.storeAirline(air);
 		pw.print(result);
 		RequestDispatcher rd1=request.getRequestDispatcher("storeProduct.jsp");
-		rd1.forward(request, response);
+		rd1.include(request, response);
 		
 	}
 
