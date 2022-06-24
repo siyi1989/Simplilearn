@@ -19,7 +19,7 @@ out.println("Welcome to Admin Home Page "+admin);
 <br/>
 <a href="ProductController">View All Product</a>
 <br/>
-<a href="storeProduct.jsp">Store Product</a>
+<a href="DropdownController">Store Product</a>
 
 <br/>
 <a href="adminChangePW.jsp">Change Admin Password</a>

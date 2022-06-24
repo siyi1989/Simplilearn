@@ -1,11 +1,10 @@
 package com.service;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.Iterator;
 import java.util.List;
 
 import com.bean.Airlines;
-import com.bean.Product;
 import com.dao.AirlineDao;
 
 public class AirlineService {
@@ -24,10 +23,10 @@ public class AirlineService {
 	
 	public String storeAirline(Airlines air) {
 		if(ad.storeAirline(air)>0) {
-			return "Airline stored successfully";
+			return "Airline save success.";
 			
 		}else {
-			return "Airline cannot be saved. Please ensure that it is not already in list.";
+			return "Airline save failed.";
 		}
 	}
 }

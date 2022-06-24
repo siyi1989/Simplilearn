@@ -40,8 +40,8 @@ public class CountriesController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
     
+
     CountriesService cs=new CountriesService();
-    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
@@ -49,9 +49,9 @@ public class CountriesController extends HttpServlet {
 		response.setContentType("text/html");	
 		
 		HttpSession hs=request.getSession();
+
 		List<Countries>listOfCountry=cs.getAllCountries();
-		
-		hs.setAttribute("countries", listOfCountry); 	
+		hs.setAttribute("listOfCountry", listOfCountry); 
 		RequestDispatcher rd=request.getRequestDispatcher("storeCountries.jsp");
 		rd.include(request, response);
 		
@@ -74,7 +74,6 @@ public class CountriesController extends HttpServlet {
 		response.setContentType("text/html");		
 		PrintWriter pw=response.getWriter();
 
-
 		String country=request.getParameter("country");
 		
 
@@ -84,8 +83,16 @@ public class CountriesController extends HttpServlet {
 		
 		String result=cs.storeCountries(ctry);
 		
-		RequestDispatcher rd1=request.getRequestDispatcher("storeAirport.jsp");
+		if(result.equals("Country save success")) {
+		pw.println("New country created. please create corresponding airport");
+		RequestDispatcher rd1=request.getRequestDispatcher("storeAirports.jsp");
 		rd1.forward(request, response);
+		}else {
+			pw.println("New country cannot be created. please check if duplicated in list");
+			RequestDispatcher rd2=request.getRequestDispatcher("storeProduct.jsp");
+			rd2.forward(request, response);
+			
+		}
 	
 
 	}

@@ -1,6 +1,6 @@
 package com.service;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -31,8 +31,8 @@ public class AirportService {
 		return listOfAirport;
 	}
 	
-	public List<Airports> getSelectedAirport(String inputcountry){
-		List<Airports>listOfSelectedAirport=portd.getSelectedAirportDetails(inputcountry);
+	public List<Airports> getSelectedAirport(String inputairport){
+		List<Airports>listOfSelectedAirport=portd.getSelectedAirportDetails(inputairport);
 		Iterator<Airports> li=listOfSelectedAirport.iterator();
 		while(li.hasNext()) {
 			Airports port=li.next();
@@ -40,6 +40,5 @@ public class AirportService {
 		
 		return listOfSelectedAirport;
 	}
-	
 	
 }

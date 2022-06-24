@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -37,7 +37,7 @@ public class AirlineDao {
 		List<Airlines> listOfAirline=new ArrayList<Airlines>();
 		try {
 			Connection con=DbResource.getDbConnection();
-			PreparedStatement pstmt=con.prepareStatement("Select * from airlines");
+			PreparedStatement pstmt=con.prepareStatement("Select * from airlines order by lairline");
 			
 			ResultSet rs=pstmt.executeQuery();
 			while(rs.next()) {

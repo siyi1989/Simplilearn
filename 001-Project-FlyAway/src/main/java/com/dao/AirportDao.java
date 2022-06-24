@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -40,7 +40,7 @@ public class AirportDao {
 		List<Airports> listOfAirport=new ArrayList<Airports>();
 		try {
 			Connection con=DbResource.getDbConnection();
-			PreparedStatement pstmt=con.prepareStatement("Select * from airports");
+			PreparedStatement pstmt=con.prepareStatement("Select * from airports order by airport");
 						
 			ResultSet rs=pstmt.executeQuery();
 			while(rs.next()) {
@@ -58,13 +58,13 @@ public class AirportDao {
 		return listOfAirport;
 	}
 	
-	public List<Airports> getSelectedAirportDetails(String inputcountry) {
+	public List<Airports> getSelectedAirportDetails(String inputairport) {
 		List<Airports> listOfSelectedAirport=new ArrayList<Airports>();
 		try {
 			Connection con=DbResource.getDbConnection();
-			PreparedStatement pstmt=con.prepareStatement("Select airport from airports where ccountry=?");
+			PreparedStatement pstmt=con.prepareStatement("Select ccountry from airports where airport=?");
 			
-			pstmt.setString(1,inputcountry);
+			pstmt.setString(1,inputairport);
 			
 			ResultSet rs=pstmt.executeQuery();
 			while(rs.next()) {
@@ -80,5 +80,7 @@ public class AirportDao {
 		}
 		return listOfSelectedAirport;
 	}
+	
+
 	
 }

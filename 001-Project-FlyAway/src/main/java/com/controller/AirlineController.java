@@ -16,6 +16,7 @@ import javax.servlet.http.HttpSession;
 import com.bean.Airlines;
 import com.service.AirlineService;
 
+
 /**
  * Servlet implementation class ProductController
  */
@@ -35,7 +36,7 @@ public class AirlineController extends HttpServlet {
 	 */
     
 
-    
+    AirlineService airs=new AirlineService();
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
@@ -44,10 +45,9 @@ public class AirlineController extends HttpServlet {
 		PrintWriter pw=response.getWriter();
 		
 		HttpSession hs=request.getSession();
-	    AirlineService airs=new AirlineService();
+
 		List<Airlines>listOfAirline=airs.getAllAirline();
-		hs.setAttribute("airlines", listOfAirline); 	
-		response.sendRedirect("storeProduct.jsp");
+		hs.setAttribute("listOfAirline", listOfAirline); 	
 		RequestDispatcher rd1=request.getRequestDispatcher("storeAirlines.jsp");
 		rd1.include(request, response);
 		
@@ -65,11 +65,19 @@ public class AirlineController extends HttpServlet {
 		
 		Airlines air=new Airlines();
 		air.setLairline(airlinename);
-	    AirlineService airs=new AirlineService();
 		String result=airs.storeAirline(air);
-		pw.print(result);
+		
+		
+		if(result.equals("Airline save success")) {
+		pw.println("New airline created");
 		RequestDispatcher rd1=request.getRequestDispatcher("storeProduct.jsp");
-		rd1.include(request, response);
+		rd1.forward(request, response);
+		}else {
+			pw.println("New airline cannot be created. please check if already in list");
+			RequestDispatcher rd2=request.getRequestDispatcher("storeAirlines.jsp");
+			rd2.include(request, response);
+			
+		}
 		
 	}
 

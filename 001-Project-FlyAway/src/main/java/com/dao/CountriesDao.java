@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -22,7 +22,7 @@ public class CountriesDao {
 		List<Countries> listOfCountries=new ArrayList<Countries>();
 		try {
 			Connection con=DbResource.getDbConnection();
-			PreparedStatement pstmt=con.prepareStatement("Select * from countries");
+			PreparedStatement pstmt=con.prepareStatement("Select * from countries order by ccountry");
 			
 			ResultSet rs=pstmt.executeQuery();
 			while(rs.next()) {

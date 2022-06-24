@@ -40,8 +40,8 @@ public class AirportController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
     
+
     AirportService ports=new AirportService();
-    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
@@ -49,21 +49,25 @@ public class AirportController extends HttpServlet {
 		response.setContentType("text/html");	
 		
 		HttpSession hs=request.getSession();
+
 		List<Airports>listOfAirport=ports.getAllAirport();
-		String inputcountry = request.getParameter("country");;
-		List<Airports>listOfSelectedAirports=ports.getSelectedAirport(inputcountry);
-		
-		hs.setAttribute("airports", listOfAirport); 
-		hs.setAttribute("SelectedAirports", listOfSelectedAirports);
-		//response.sendRedirect("displayProduct.jsp");	
-		RequestDispatcher rd1=request.getRequestDispatcher("storeProduct.jsp"); //using dropdown
+		hs.setAttribute("listOfAirport", listOfAirport); 
+		RequestDispatcher rd1=request.getRequestDispatcher("storeAirports.jsp");
 		rd1.include(request, response);
-		RequestDispatcher rd2=request.getRequestDispatcher("searchProduct.jsp"); //using dropdown
-		rd2.include(request, response);
-		RequestDispatcher rd3=request.getRequestDispatcher("storeAirports.jsp");
-		rd3.include(request, response);
 		
 		
+//		PrintWriter pw=response.getWriter();
+//		String country = request.getParameter("country");;
+//		List<Airports>listOfSelectedAirports=ports.getSelectedAirport(country);
+//		
+//
+//		hs.setAttribute("SelectedAirports", listOfSelectedAirports);
+//		response.sendRedirect("storeProduct.jsp");	
+
+//		RequestDispatcher rd2=request.getRequestDispatcher("searchProduct.jsp"); //using dropdown
+//		rd2.include(request, response);
+//		RequestDispatcher rd3=request.getRequestDispatcher("storeAirports.jsp");
+//		rd3.include(request, response);
 		
 
 		
@@ -85,7 +89,6 @@ public class AirportController extends HttpServlet {
 		String airport=request.getParameter("airport");
 		String country=request.getParameter("country");
 		
-
 		Airports port=new Airports();
 		port.setAirport(airport);
 		port.setccountry(country);
@@ -93,8 +96,16 @@ public class AirportController extends HttpServlet {
 		
 		String result=ports.storeAirport(port);
 		
+		if(result.equals("Airport save success")) {
+		pw.println("New airport created");
 		RequestDispatcher rd1=request.getRequestDispatcher("storeProduct.jsp");
 		rd1.forward(request, response);
+		}else {
+			pw.println("New airport cannot be created. please check if already in list");
+			RequestDispatcher rd2=request.getRequestDispatcher("storeAirports.jsp");
+			rd2.include(request, response);	
+			
+		}
 		
 	
 

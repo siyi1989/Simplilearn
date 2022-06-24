@@ -28,7 +28,7 @@
 		
 
 <%
-Object obj=session.getAttribute("products");
+Object obj=session.getAttribute("listOfProduct");
 	if(obj!=null){
 		List<Product> listOfProduct=(List<Product>)obj;
 		Iterator<Product> li=listOfProduct.iterator();

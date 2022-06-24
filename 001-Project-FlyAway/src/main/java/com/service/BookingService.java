@@ -1,6 +1,6 @@
 package com.service;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.Iterator;
 import java.util.List;
 

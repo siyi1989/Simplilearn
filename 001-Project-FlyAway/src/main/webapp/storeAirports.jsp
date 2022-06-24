@@ -1,8 +1,6 @@
 <%@page import="java.util.Iterator"%>
-<%@page import="com.bean.Airports"%>
-<%@page import="com.service.AirportService"%>
-<%@page import="com.dao.AirportDao"%>
 <%@page import="java.util.List"%>
+<%@page import="com.bean.Airports"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -34,7 +32,7 @@
 		
 
 <%
-Object obj=session.getAttribute("airports");
+Object obj=session.getAttribute("listOfAirport");
 	if(obj!=null){
 		List<Airports> listOfAirport=(List<Airports>)obj;
 		Iterator<Airports> li=listOfAirport.iterator();
