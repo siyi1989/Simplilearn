@@ -35,13 +35,13 @@ public class ProductDao {
 		}
 	}
 	
-	public List<Product> getSelectedProductDetails(Product product,Object fromDate,Object toDate) {
+	public List<Product> getSelectedProductDetails(String fsource,String fdestination, Object fromDate,Object toDate) {
 		List<Product> listOfProduct=new ArrayList<Product>();
 		try {
 			Connection con=DbResource.getDbConnection();
 			PreparedStatement pstmt=con.prepareStatement("Select * from flights where fslot<>0 and fsource in(?) and fdestination in(?) and fdate between"+ fromDate +" and "+toDate);
-			pstmt.setString(1,product.getFsource());
-			pstmt.setString(2,product.getFdestination());
+			pstmt.setString(1,fsource);
+			pstmt.setString(2,fdestination);
 			pstmt.setObject(3,fromDate);
 			pstmt.setObject(4,toDate);
 			

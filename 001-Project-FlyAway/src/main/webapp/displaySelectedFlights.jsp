@@ -34,7 +34,7 @@ Integer reqslot=(Integer)session.getAttribute("reqslot");
 		Iterator<Product> li=listOfSelectedProduct.iterator();
 		while (li.hasNext()){
 			Product p=li.next();
-			
+		
 			%>
 			<form action="SearchController" method="post"> 
 			<tr name=searchid value=<%=p.getFid()%>>
@@ -44,9 +44,14 @@ Integer reqslot=(Integer)session.getAttribute("reqslot");
 				<td name=fdestination value=<%=p.getFdestination() %>>
 				<td name=fdestport value=<%=p.getFdestport() %>>
 				<td name=fairline value=<%=p.getFairline() %>>
-				<td name=fprice value=<%=p.getFprice() %>>
+				<td name=fprice value=<%=p.getFprice() %>>	
+						<%-- 	<%
+			if(reqslot>p.getFslot()){
+				String fslotcomment=("Limited "+p.getFslot()+" Slots");
 				
-				<td value=<%=if(reqslot>p.getFslot()){out.println("Limited "+p.getFslot()+" Slots");}%>>
+				} %>
+				<td value=<%=fslotcomment%>>
+				--%>
 				
 	<td><input type="Submit" value="Book"/></td>
 	<td><input type="Reset" value="Reset"/></td>

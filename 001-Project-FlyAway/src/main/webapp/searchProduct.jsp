@@ -15,20 +15,15 @@
 </head>
 <body>
 
-<%
-String user=(String)session.getAttribute("User");
-if(user==null){
-	response.sendRedirect("index.jsp");
-}
-%>
-
 
 			
 <h2>Search Page</h2>
-<form action="SearchController" method="get" name="form1"> 
-	<input type="hidden" name="email" value="<%=session.getAttribute("User") %>" />
+<form action="SearchController" method="post" name="form1"> 
+	
+<label>Fly From</label>
+<select name="fsource">
 	<%
-Object obj=session.getAttribute("countries");
+Object obj=session.getAttribute("listOfCountry");
 	if(obj!=null){
 		List<Countries> listOfCountry=(List<Countries>)obj;
 		Iterator<Countries> li=listOfCountry.iterator();
@@ -37,16 +32,36 @@ Object obj=session.getAttribute("countries");
 			
 			%>
 			
-				<label>Fly From</label>
-				<option name="fsource" id="fsource" value=<%=ctry.getCcountry()%>><%=ctry.getCcountry() %></option> 
-				<label>Fly To</label>
-				<option name="fdestination" id="fdestination" value=<%=ctry.getCcountry()%>><%=ctry.getCcountry() %></option> 
+				<option value=<%=ctry.getCcountry()%>><%=ctry.getCcountry() %></option> 
+
 			
 		<%
 		}
 	}
 	
 	%>
+	</select>
+	<label>Fly To</label>
+<select name="fdest">
+	<%
+Object obj1=session.getAttribute("listOfCountry");
+	if(obj1!=null){
+		List<Countries> listOfCountry=(List<Countries>)obj1;
+		Iterator<Countries> li=listOfCountry.iterator();
+		while (li.hasNext()){
+			Countries ctry=li.next();
+			
+			%>
+			
+				<option value=<%=ctry.getCcountry()%>><%=ctry.getCcountry() %></option> 
+
+			
+		<%
+		}
+	}
+	
+	%>
+	</select>
 	<br/>
 	<label>Search within date range</label><br/>
 	<label>Date From</label>
@@ -55,7 +70,7 @@ Object obj=session.getAttribute("countries");
 	<input type="text" name="tripEnd" id="ftodate" readonly='true'><br/>
 	<br/>
 	<label>Number of passenger</label>
-	<select type="dropdown" name = "reqslot">
+	<select type="text" name = "reqslot">
 		<option value = "1" selected>1</option>
 		<option value = "2" selected>2</option>
 		<option value = "3" selected>3</option>

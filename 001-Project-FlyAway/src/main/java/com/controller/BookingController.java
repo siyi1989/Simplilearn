@@ -15,9 +15,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.bean.Airlines;
+import com.bean.Airports;
 import com.bean.Booking;
+import com.bean.Countries;
 import com.bean.Product;
+import com.service.AirlineService;
+import com.service.AirportService;
 import com.service.BookingService;
+import com.service.CountriesService;
+import com.service.ProductService;
 
 /**
  * Servlet implementation class ProductController
@@ -42,8 +49,25 @@ public class BookingController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
+
 		
 		
+		response.setContentType("text/html");	
+		
+		HttpSession hs=request.getSession();
+		
+		int searchid=Integer.parseInt(request.getParameter("searchid"));
+		hs.setAttribute("fid", searchid);
+		
+		Product product=new Product();
+
+		ProductService ps=new ProductService();
+		
+		List<Product>listOfConfirmProduct=ps.confirmProduct(product, searchid);
+		hs.setAttribute("confirmproduct", listOfConfirmProduct); 
+		
+		RequestDispatcher rd1=request.getRequestDispatcher("checkProduct.jsp");
+		rd1.forward(request, response);
 	}
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

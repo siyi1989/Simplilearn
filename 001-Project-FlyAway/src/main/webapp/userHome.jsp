@@ -14,7 +14,8 @@ if(user==null){
 }else{
 out.println("Welcome to User Home Page "+user);}
 %>
-<a href="searchProduct.jsp">Search Flights</a>
+<br/>
+<a href="SearchController">Search Flights</a>
 <br/>
 <a href="index.jsp">Logout</a>
 </body>
