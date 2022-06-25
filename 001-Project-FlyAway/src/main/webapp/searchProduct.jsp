@@ -55,7 +55,7 @@ Object obj=session.getAttribute("countries");
 	<input type="text" name="tripEnd" id="ftodate" readonly='true'><br/>
 	<br/>
 	<label>Number of passenger</label>
-	<select type="dropdown" name = "fslot">
+	<select type="dropdown" name = "reqslot">
 		<option value = "1" selected>1</option>
 		<option value = "2" selected>2</option>
 		<option value = "3" selected>3</option>

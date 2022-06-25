@@ -58,8 +58,8 @@ public class AirportDao {
 		return listOfAirport;
 	}
 	
-	public List<Airports> getSelectedAirportDetails(String inputairport) {
-		List<Airports> listOfSelectedAirport=new ArrayList<Airports>();
+	public List<Airports> getSelectedDetails(String inputairport) {
+		List<Airports> listOfSelected=new ArrayList<Airports>();
 		try {
 			Connection con=DbResource.getDbConnection();
 			PreparedStatement pstmt=con.prepareStatement("Select ccountry from airports where airport=?");
@@ -70,15 +70,15 @@ public class AirportDao {
 			while(rs.next()) {
 
 				Airports port=new Airports();
-				port.setAirport(rs.getString(1));
-				listOfSelectedAirport.add(port);
+				port.setccountry(rs.getString(1));
+				listOfSelected.add(port);
 				
 			}
 		}catch (Exception e) {
 			System.out.println(e);
 		
 		}
-		return listOfSelectedAirport;
+		return listOfSelected;
 	}
 	
 

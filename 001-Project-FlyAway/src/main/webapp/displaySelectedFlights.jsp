@@ -28,6 +28,7 @@
 
 <%
 Object obj=session.getAttribute("selproducts");
+Integer reqslot=(Integer)session.getAttribute("reqslot");
 	if(obj!=null){
 		List<Product> listOfSelectedProduct=(List<Product>)obj;
 		Iterator<Product> li=listOfSelectedProduct.iterator();
@@ -35,21 +36,20 @@ Object obj=session.getAttribute("selproducts");
 			Product p=li.next();
 			
 			%>
-			<form action="SearchController" method="get"> 
-			<tr id=<%=p.getFid()%>>
-				<td><%=p.getFdate() %></td>
-				<td><%=p.getFsource() %></td>
-				<td><%=p.getFsourceport() %></td>
-				<td><%=p.getFdestination() %></td>
-				<td><%=p.getFdestport() %></td>
-				<td><%=p.getFairline() %></td>
-				<td><%=p.getFprice() %></td>
-				<td><%if(p.getFslot()<10)
-				{%>out.println(p.getFslot()+" number of seats left");<%}%></td>
+			<form action="SearchController" method="post"> 
+			<tr name=searchid value=<%=p.getFid()%>>
+				<td name=fdate value=<%=p.getFdate()%>>
+				<td name=fsource value=<%=p.getFsource() %>>
+				<td name=fsourceport value=<%=p.getFsourceport() %>>
+				<td name=fdestination value=<%=p.getFdestination() %>>
+				<td name=fdestport value=<%=p.getFdestport() %>>
+				<td name=fairline value=<%=p.getFairline() %>>
+				<td name=fprice value=<%=p.getFprice() %>>
 				
-	<td><input type="hidden" name="flightName" id="flightID" /></td>
-	<td><input type="Submit" value="Book" onclick="show()"/></td>
-	
+				<td value=<%=if(reqslot>p.getFslot()){out.println("Limited "+p.getFslot()+" Slots");}%>>
+				
+	<td><input type="Submit" value="Book"/></td>
+	<td><input type="Reset" value="Reset"/></td>
 
 			</tr>
 		</table>
@@ -61,7 +61,7 @@ Object obj=session.getAttribute("selproducts");
 	%>
 	
 
-
+<%-- 
         <script>
             function show() {
                 var rowId = event.target.parentNode.parentNode.id;
@@ -71,6 +71,7 @@ Object obj=session.getAttribute("selproducts");
             }
             
         </script>  
+--%>
 
 </body>
 </html>

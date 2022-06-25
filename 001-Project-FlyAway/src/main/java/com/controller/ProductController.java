@@ -3,7 +3,6 @@ package com.controller;
 import java.io.IOException;
 
 import java.io.PrintWriter;
-import java.sql.Date;
 import java.util.List;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -74,15 +73,17 @@ public class ProductController extends HttpServlet {
 		String fsourceport=request.getParameter("fsourceport");
 		String fdestination=request.getParameter("fdestination");
 		String fdestport=request.getParameter("fdestport");
+		Object fdate=request.getParameter("fdate");
 		
-		SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
-		Date fdate = null;
-		try {
-		 fdate = (Date)formatter.parse(request.getParameter("fdate"));
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		java.util.Date utilDate = null;
+//		try {
+//			utilDate = new SimpleDateFormat("MM/dd/yyyy").parse(request.getParameter("fdate"));
+//		} catch (ParseException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+
 		
 		Product product=new Product();
 		product.setFairline(fairline);
@@ -95,18 +96,20 @@ public class ProductController extends HttpServlet {
 		product.setFslot(fslot);
 		
 		
-		List<Airports> resultsource=airs.getSelectedAirport(fsourceport);
-		List<Airports> resultdest=airs.getSelectedAirport(fdestport);
+		List<Airports> resultsource=airs.getSelected(fsourceport);
+		List<Airports> resultdest=airs.getSelected(fdestport);
 		
 		RequestDispatcher rd1=request.getRequestDispatcher("storeProduct.jsp");
 		
 		if((!resultsource.contains(fsource)) || !resultdest.contains(fdestination) ) {
-			pw.println("Mismatch between airport and country <br/> +Country from:"+resultsource+"Airport from:"+fsourceport+"<br/>Country to:"+resultdest+"Airport to:"+fdestport);
-			rd1.include(request,response);
+			pw.println("Mismatch between airport and country.");
+			pw.println("Country from:"+resultsource+"Airport from:"+fsourceport);
+			pw.println("Country to:"+resultdest+"Airport to:"+fdestport);
+			rd1.forward(request,response);
 		}else{
 			String result=ps.storeProduct(product);
 			pw.println(result);
-			rd1.include(request, response);
+			rd1.forward(request, response);
 			}
 		}
 

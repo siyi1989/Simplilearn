@@ -18,7 +18,7 @@ public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int fid;
-	private Date fdate;
+	private Object fdate;
 	private String fsourceport;
 	private String fdestport;
 	private String fairline;
@@ -41,13 +41,13 @@ public class Product {
 
 
 
-	public Date getFdate() {
+	public Object getFdate() {
 		return fdate;
 	}
 
 
 
-	public void setFdate(Date fdate) {
+	public void setFdate(Object fdate) {
 		this.fdate = fdate;
 	}
 
@@ -144,7 +144,7 @@ public class Product {
 
 
 
-	public Product(int fid, Date fdate, String fsourceport, String fdestport, String fairline, float fprice,
+	public Product(int fid, Object fdate, String fsourceport, String fdestport, String fairline, float fprice,
 			String fsource, String fdestination, int fslot) {
 		super();
 		this.fid = fid;

@@ -6344,3 +6344,36 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:j
 2022-06-24 15:48:26,564 [Worker-27: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
 2022-06-24 15:48:26,815 [Worker-27: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: 001-Project-FlyAway:001-Project-FlyAway:0.0.1-SNAPSHOT @ C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\pom.xml.
 2022-06-24 15:48:27,354 [Worker-27: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /001-Project-FlyAway/src/main/java
+2022-06-24 15:48:27,354 [Worker-27: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /001-Project-FlyAway/src/test/java
+2022-06-24 15:48:27,578 [Worker-27: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2022-06-24 15:55:41,587 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-06-24 15:56:36,874 [Worker-19: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2022-06-24 15:56:40,702 [Worker-19: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: 001-Project-FlyAway:001-Project-FlyAway:0.0.1-SNAPSHOT @ C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\pom.xml.
+2022-06-24 15:56:43,099 [Worker-19: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /001-Project-FlyAway/src/main/java
+2022-06-24 15:56:43,101 [Worker-19: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /001-Project-FlyAway/src/test/java
+2022-06-24 15:56:44,940 [Worker-19: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 8 sec
+2022-06-24 15:56:55,091 [Worker-7: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-24 15:56:55,092 [Worker-7: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\main\resources
+2022-06-24 15:56:55,095 [Worker-7: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-24 15:56:55,095 [Worker-7: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\test\resources
+2022-06-24 16:22:41,590 [Worker-24: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-24 16:22:41,591 [Worker-24: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\main\resources
+2022-06-24 16:22:41,592 [Worker-24: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-24 16:22:41,592 [Worker-24: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\test\resources
+2022-06-24 16:40:17,558 [Worker-26: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-24 16:40:17,559 [Worker-26: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\main\resources
+2022-06-24 16:40:17,560 [Worker-26: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-24 16:40:17,560 [Worker-26: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\test\resources
+2022-06-24 16:40:27,662 [Worker-36: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2022-06-24 16:40:32,035 [Worker-36: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: 001-Project-FlyAway:001-Project-FlyAway:0.0.1-SNAPSHOT @ C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\pom.xml.
+2022-06-24 16:40:33,124 [Worker-36: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /001-Project-FlyAway/src/main/java
+2022-06-24 16:40:33,124 [Worker-36: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /001-Project-FlyAway/src/test/java
+2022-06-24 16:40:33,573 [Worker-36: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 5 sec
+2022-06-24 16:45:46,795 [Worker-31: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-24 16:45:46,795 [Worker-31: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\main\resources
+2022-06-24 16:45:46,798 [Worker-31: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-24 16:45:46,798 [Worker-31: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\test\resources
+2022-06-24 16:55:54,441 [Worker-46: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-24 16:55:54,441 [Worker-46: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\main\resources
+2022-06-24 16:55:54,443 [Worker-46: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-24 16:55:54,443 [Worker-46: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\limsi\eclipse-workspace\001-Project-FlyAway\src\test\resources

@@ -24,7 +24,7 @@ public class ProductService {
 	}
 	
 	
-	public List<Product> getSelectedProduct(Product product,Date fromDate,Date toDate){
+	public List<Product> getSelectedProduct(Product product,Object fromDate,Object toDate){
 		List<Product>listOfSelectedProduct=pd.getSelectedProductDetails(product,fromDate,toDate);
 		Iterator<Product> li=listOfSelectedProduct.iterator();
 		while(li.hasNext()) {
@@ -34,13 +34,14 @@ public class ProductService {
 		return listOfSelectedProduct;
 	}
 	
-	public String confirmProduct(Product product,int searchid) {
-		if(product.getFid()==searchid ){
-			return "Flight details search successfully";
-			
-		}else {
-			return "Flight details cannot be found.Please search again";
+	public List<Product> confirmProduct(Product product,int searchid) {
+		List<Product>listOfConfirmedProduct=pd.confirmProduct(product,searchid);
+		Iterator<Product> li=listOfConfirmedProduct.iterator();
+		while(li.hasNext()) {
+			Product p=li.next();
 		}
+		
+		return listOfConfirmedProduct;
 	}
 	
 	public List<Product> getAllProductDetails(){

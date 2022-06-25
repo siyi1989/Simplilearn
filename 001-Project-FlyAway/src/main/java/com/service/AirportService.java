@@ -31,14 +31,14 @@ public class AirportService {
 		return listOfAirport;
 	}
 	
-	public List<Airports> getSelectedAirport(String inputairport){
-		List<Airports>listOfSelectedAirport=portd.getSelectedAirportDetails(inputairport);
-		Iterator<Airports> li=listOfSelectedAirport.iterator();
+	public List<Airports> getSelected(String inputairport){
+		List<Airports>listOfSelected=portd.getSelectedDetails(inputairport);
+		Iterator<Airports> li=listOfSelected.iterator();
 		while(li.hasNext()) {
 			Airports port=li.next();
 		}
 		
-		return listOfSelectedAirport;
+		return listOfSelected;
 	}
 	
 }

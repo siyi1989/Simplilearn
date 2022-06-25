@@ -16,7 +16,7 @@ public class ProductDao {
 		try {
 			Connection con=DbResource.getDbConnection();
 			PreparedStatement pstmt=con.prepareStatement("Insert into flights(fdate,fsource,fsourceport,fdestination,fdestport,fairline,fslot,fprice) values (?,?,?,?,?,?,?,?)");
-			pstmt.setDate(1,product.getFdate());
+			pstmt.setObject(1,product.getFdate());
 			pstmt.setString(2,product.getFsource());
 			pstmt.setString(3,product.getFsourceport());
 			pstmt.setString(4,product.getFdestination());
@@ -35,21 +35,22 @@ public class ProductDao {
 		}
 	}
 	
-	public List<Product> getSelectedProductDetails(Product product,Date fromDate,Date toDate) {
+	public List<Product> getSelectedProductDetails(Product product,Object fromDate,Object toDate) {
 		List<Product> listOfProduct=new ArrayList<Product>();
 		try {
 			Connection con=DbResource.getDbConnection();
 			PreparedStatement pstmt=con.prepareStatement("Select * from flights where fslot<>0 and fsource in(?) and fdestination in(?) and fdate between"+ fromDate +" and "+toDate);
 			pstmt.setString(1,product.getFsource());
 			pstmt.setString(2,product.getFdestination());
-			
+			pstmt.setObject(3,fromDate);
+			pstmt.setObject(4,toDate);
 			
 			ResultSet rs=pstmt.executeQuery();
 			while(rs.next()) {
 
 				Product p=new Product();
 				p.setFid(rs.getInt(1));
-				p.setFdate(rs.getDate(2));
+				p.setFdate(rs.getObject(2));
 				p.setFsource(rs.getString(3));
 				p.setFsourceport(rs.getString(4));
 				p.setFdestination(rs.getString(5));
@@ -67,20 +68,35 @@ public class ProductDao {
 		return listOfProduct;
 	}
 	
-	public int confirmProduct(Product product,int searchid) {
+	public List<Product> confirmProduct(Product product,int searchid) {
+		List<Product> listOfProduct=new ArrayList<Product>();
+		
 		try {
 			Connection con=DbResource.getDbConnection();
 			PreparedStatement pstmt=con.prepareStatement("select * from flights where fid=?");
-			pstmt.setInt(1,product.getFid());
+			pstmt.setInt(1,searchid);
 			
-			int res=pstmt.executeUpdate();
-			return res;
+			ResultSet rs=pstmt.executeQuery();
+			while(rs.next()) {
+
+				Product p=new Product();
+				p.setFid(rs.getInt(1));
+				p.setFdate(rs.getObject(2));
+				p.setFsource(rs.getString(3));
+				p.setFsourceport(rs.getString(4));
+				p.setFdestination(rs.getString(5));
+				p.setFdestport(rs.getString(6));
+				p.setFairline(rs.getString(7));
+				p.setFprice(rs.getFloat(8));
+				p.setFslot(rs.getInt(9));
+				listOfProduct.add(p);
+				
+			}
 		}catch (Exception e) {
 			System.out.println(e);
-			return 0;
-				
-					
+		
 		}
+		return listOfProduct;
 	}
 	
 	public List<Product> getAllProductDetails() {
@@ -96,7 +112,7 @@ public class ProductDao {
 				//below code is used to create new product object for each product and print in web
 				Product p=new Product();
 				p.setFid(rs.getInt(1));
-				p.setFdate(rs.getDate(2));
+				p.setFdate(rs.getObject(2));
 				p.setFsource(rs.getString(3));
 				p.setFsourceport(rs.getString(4));
 				p.setFdestination(rs.getString(5));

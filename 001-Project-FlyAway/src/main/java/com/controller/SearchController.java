@@ -51,38 +51,38 @@ public class SearchController extends HttpServlet {
 		
 		HttpSession hs=request.getSession();
 		
-		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-		Date fromDate = null;
-		try {
-			fromDate = (Date)formatter.parse(request.getParameter("tripStart"));
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		Date toDate = null;
-		try {
-		 toDate = (Date)formatter.parse(request.getParameter("tripEnd"));
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+//		Date fromDate = null;
+//		try {
+//			fromDate = (Date)formatter.parse(request.getParameter("tripStart"));
+//		} catch (ParseException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
+//		Date toDate = null;
+//		try {
+//		 toDate = (Date)formatter.parse(request.getParameter("tripEnd"));
+//		} catch (ParseException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		
 		String fsource=request.getParameter("fsource");
 		String fdestination=request.getParameter("fdestination");
-		int searchid=Integer.parseInt(request.getParameter("flightName"));
+		Object fromDate=request.getParameter("tripStart");
+		Object toDate=request.getParameter("tripEnd");
+		int reqslot=Integer.parseInt("reqslot");
 		
 		Product product=new Product();
 		product.setFsource(fsource);
 		product.setFdestination(fdestination);
 
-		List<Product>listOfProduct=ps.getSelectedProduct(product, fromDate, toDate);
-		hs.setAttribute("selproducts", listOfProduct); 
+		List<Product>listOfSelProduct=ps.getSelectedProduct(product, fromDate, toDate);
+		hs.setAttribute("selproducts", listOfSelProduct); 
+		hs.setAttribute("reqslot",reqslot);
 		
-		Countries ctry=new Countries();
-		List<Countries>listOfCountry=cs.getAllCountries();
-		hs.setAttribute("countries", listOfCountry);
-		hs.setAttribute("bookId", searchid);	
+			
 		RequestDispatcher rd1=request.getRequestDispatcher("displaySelectedFlights.jsp");
 		rd1.include(request, response);
 		
@@ -97,7 +97,20 @@ public class SearchController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
+		response.setContentType("text/html");	
+		
+		HttpSession hs=request.getSession();
+		
+		int searchid=Integer.parseInt(request.getParameter("searchid"));
+		hs.setAttribute("fid", searchid);
+		
+		Product product=new Product();
 
+		List<Product>listOfConfirmProduct=ps.confirmProduct(product, searchid);
+		hs.setAttribute("confirmproduct", listOfConfirmProduct); 
+		
+		RequestDispatcher rd1=request.getRequestDispatcher("checkProduct.jsp");
+		rd1.forward(request, response);
 
 }
 }
