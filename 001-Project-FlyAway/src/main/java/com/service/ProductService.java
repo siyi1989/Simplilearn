@@ -24,7 +24,7 @@ public class ProductService {
 	}
 	
 	
-	public List<Product> getSelectedProduct(String fsource,String fdestination, Object fromDate,Object toDate){
+	public List<Product> getSelectedProduct(String fsource,String fdestination, Date fromDate,Date toDate){
 		List<Product>listOfSelectedProduct=pd.getSelectedProductDetails(fsource,fdestination,fromDate,toDate);
 		Iterator<Product> li=listOfSelectedProduct.iterator();
 		while(li.hasNext()) {

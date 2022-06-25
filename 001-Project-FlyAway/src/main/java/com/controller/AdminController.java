@@ -56,7 +56,7 @@ public class AdminController extends HttpServlet {
 		String newpassword1=request.getParameter("newpassword1");
 		String newpassword2=request.getParameter("newpassword2");
 		
-		//create java class object and set the class received from view
+		//create java class Date and set the class received from view
 		Login ll=new Login();
 		ll.setEmail(email);
 		ll.setPassword(password);
@@ -65,13 +65,13 @@ public class AdminController extends HttpServlet {
 		ll1.setEmail(email);
 		ll1.setPassword(newpassword1);
 		
-		//Create service class object
+		//Create service class Date
 		LoginService ls=new LoginService();
 		String result=ls.checkAdminUser(ll);
 		
 		LoginService ls1=new LoginService();
 		
-		//pass login object to service class
+		//pass login Date to service class
 		if(result.equals("adminSuccess")) {
 			if(newpassword1.equals(newpassword2)) {
 			String result1=ls1.changeAdminPw(ll1);

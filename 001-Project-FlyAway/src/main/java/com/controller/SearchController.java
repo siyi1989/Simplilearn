@@ -88,42 +88,49 @@ public class SearchController extends HttpServlet {
 
 		
 		response.setContentType("text/html");	
+		PrintWriter pw=response.getWriter();
 		
 		HttpSession hs=request.getSession();
 		
-//		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-//		Date fromDate = null;
-//		try {
-//			fromDate = (Date)formatter.parse(request.getParameter("tripStart"));
-//		} catch (ParseException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		
-//		Date toDate = null;
-//		try {
-//		 toDate = (Date)formatter.parse(request.getParameter("tripEnd"));
-//		} catch (ParseException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		java.util.Date utilDateFrom = null;
+		try {
+			utilDateFrom = new SimpleDateFormat("MM/dd/yyyy").parse(request.getParameter("tripStart"));
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		java.sql.Date fromDate = new java.sql.Date(utilDateFrom.getDate());
+		
+		java.util.Date utilDateTo = null;
+		try {
+			utilDateTo = new SimpleDateFormat("MM/dd/yyyy").parse(request.getParameter("tripEnd"));
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		java.sql.Date toDate = new java.sql.Date(utilDateTo.getDate());
 		
 		String fsource=request.getParameter("fsource");
 		String fdestination=request.getParameter("fdestination");
-		Object fromDate=request.getParameter("tripStart");
-		Object toDate=request.getParameter("tripEnd");
 		Integer reqslot=Integer.parseInt(request.getParameter("reqslot"));
 		
 		Product product=new Product();
 
-		ProductService ps=new ProductService();
 		List<Product>listOfSelProduct=ps.getSelectedProduct(fsource,fdestination, fromDate, toDate);
 		hs.setAttribute("selproducts", listOfSelProduct); 
 		hs.setAttribute("reqslot",reqslot);
 		
 			
-		RequestDispatcher rd1=request.getRequestDispatcher("displaySelectedFlights.jsp");
-		rd1.include(request, response);
+		RequestDispatcher rd1=request.getRequestDispatcher("searchProduct.jsp");
+		RequestDispatcher rd2=request.getRequestDispatcher("displaySelectedFlights.jsp");
+		
+		if(listOfSelProduct.size()<=0) {
+			pw.println("No flights matching criteria. Please select again.");
+			rd1.include(request, response);
+			
+		}else {
+		rd2.include(request, response);
+}
+	}
+	}
 
-}
-}

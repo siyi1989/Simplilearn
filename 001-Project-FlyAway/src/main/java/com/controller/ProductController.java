@@ -3,6 +3,7 @@ package com.controller;
 import java.io.IOException;
 
 import java.io.PrintWriter;
+import java.sql.Date;
 import java.util.List;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -73,16 +74,15 @@ public class ProductController extends HttpServlet {
 		String fsourceport=request.getParameter("fsourceport");
 		String fdestination=request.getParameter("fdestination");
 		String fdestport=request.getParameter("fdestport");
-		Object fdate=request.getParameter("fdate");
 		
-//		java.util.Date utilDate = null;
-//		try {
-//			utilDate = new SimpleDateFormat("MM/dd/yyyy").parse(request.getParameter("fdate"));
-//		} catch (ParseException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+		java.util.Date utilDate = null;
+		try {
+			utilDate = new SimpleDateFormat("MM/dd/yyyy").parse(request.getParameter("fdate"));
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		java.sql.Date fdate = new java.sql.Date(utilDate.getDate());
 
 		
 		Product product=new Product();

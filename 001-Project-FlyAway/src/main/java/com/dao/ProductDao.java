@@ -16,7 +16,7 @@ public class ProductDao {
 		try {
 			Connection con=DbResource.getDbConnection();
 			PreparedStatement pstmt=con.prepareStatement("Insert into flights(fdate,fsource,fsourceport,fdestination,fdestport,fairline,fslot,fprice) values (?,?,?,?,?,?,?,?)");
-			pstmt.setObject(1,product.getFdate());
+			pstmt.setDate(1,product.getFdate());
 			pstmt.setString(2,product.getFsource());
 			pstmt.setString(3,product.getFsourceport());
 			pstmt.setString(4,product.getFdestination());
@@ -35,22 +35,22 @@ public class ProductDao {
 		}
 	}
 	
-	public List<Product> getSelectedProductDetails(String fsource,String fdestination, Object fromDate,Object toDate) {
+	public List<Product> getSelectedProductDetails(String fsource,String fdestination, Date fromDate,Date toDate) {
 		List<Product> listOfProduct=new ArrayList<Product>();
 		try {
 			Connection con=DbResource.getDbConnection();
-			PreparedStatement pstmt=con.prepareStatement("Select * from flights where fslot<>0 and fsource in(?) and fdestination in(?) and fdate between"+ fromDate +" and "+toDate);
+			PreparedStatement pstmt=con.prepareStatement("Select * from flights where fslot<>0 and fsource=? and fdestination=? and fdate between ? and ?");
 			pstmt.setString(1,fsource);
 			pstmt.setString(2,fdestination);
-			pstmt.setObject(3,fromDate);
-			pstmt.setObject(4,toDate);
+			pstmt.setDate(3,fromDate);
+			pstmt.setDate(4,toDate);
 			
 			ResultSet rs=pstmt.executeQuery();
 			while(rs.next()) {
 
 				Product p=new Product();
 				p.setFid(rs.getInt(1));
-				p.setFdate(rs.getObject(2));
+				p.setFdate(rs.getDate(2));
 				p.setFsource(rs.getString(3));
 				p.setFsourceport(rs.getString(4));
 				p.setFdestination(rs.getString(5));
@@ -81,7 +81,7 @@ public class ProductDao {
 
 				Product p=new Product();
 				p.setFid(rs.getInt(1));
-				p.setFdate(rs.getObject(2));
+				p.setFdate(rs.getDate(2));
 				p.setFsource(rs.getString(3));
 				p.setFsourceport(rs.getString(4));
 				p.setFdestination(rs.getString(5));
@@ -109,10 +109,10 @@ public class ProductDao {
 			//below system print stmt is used to print directly in servlet and cannot be used for printing in web	
 			//System.out.println("pid is" +rs.getInt(1)+"Pname is "+rs.getString(2)+"Price"+rs.getFloat(3));
 			
-				//below code is used to create new product object for each product and print in web
+				//below code is used to create new product Date for each product and print in web
 				Product p=new Product();
 				p.setFid(rs.getInt(1));
-				p.setFdate(rs.getObject(2));
+				p.setFdate(rs.getDate(2));
 				p.setFsource(rs.getString(3));
 				p.setFsourceport(rs.getString(4));
 				p.setFdestination(rs.getString(5));

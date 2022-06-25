@@ -21,7 +21,7 @@
 <form action="SearchController" method="post" name="form1"> 
 	
 <label>Fly From</label>
-<select name="fsource">
+<select name="fsource" required>
 	<%
 Object obj=session.getAttribute("listOfCountry");
 	if(obj!=null){
@@ -42,7 +42,7 @@ Object obj=session.getAttribute("listOfCountry");
 	%>
 	</select>
 	<label>Fly To</label>
-<select name="fdest">
+<select name="fdest" required>
 	<%
 Object obj1=session.getAttribute("listOfCountry");
 	if(obj1!=null){
@@ -65,9 +65,9 @@ Object obj1=session.getAttribute("listOfCountry");
 	<br/>
 	<label>Search within date range</label><br/>
 	<label>Date From</label>
-	<input type="text" name="tripStart" id="ffromdate" readonly='true'>
+	<input type="text" name="tripStart" id="ffromdate" readonly='true' required>
 	<label>To</label>
-	<input type="text" name="tripEnd" id="ftodate" readonly='true'><br/>
+	<input type="text" name="tripEnd" id="ftodate" readonly='true' required><br/>
 	<br/>
 	<label>Number of passenger</label>
 	<select type="text" name = "reqslot">
