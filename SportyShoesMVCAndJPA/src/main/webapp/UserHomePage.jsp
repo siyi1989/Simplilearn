@@ -11,8 +11,9 @@
 <body>
 <font color="red">  ${requestScope.msg}</font>
 <br/>
-<Strong>View Products</Strong>
 
+<br/>
+<a href="ViewProductsUser.jsp">Go Shopping</a>
 <br/>
 <a href="Login.jsp">Logout</a>
 
